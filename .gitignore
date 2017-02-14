@@ -1,0 +1,2 @@
+# prevent recusrion issues for cfg git
+.cfg
