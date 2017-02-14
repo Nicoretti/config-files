@@ -2,7 +2,7 @@
 # ZSH specifics
 # =========================================================
 plugins=(cargo themes rust rustup pip python web-search fzf diab)
-ZSH_THEME="random"
+ZSH_THEME="arrow"
 export ZSH="${HOME}/.oh-my-zsh"
 export ZSH_CUSTOM="${HOME}/.oh-my-zsh-custom-config"
 source $ZSH/oh-my-zsh.sh
