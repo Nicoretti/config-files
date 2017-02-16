@@ -13,6 +13,7 @@
 " * Add Template Plugin
 " * Add Suround Plugin
 " * Add latest rust plugin
+" * Add automation for header guard insertion
 
 "=========================================================
 " Plug (Plugin manager settings)
@@ -50,9 +51,8 @@ call plug#end()
 "=========================================================
 " change color scheme
 colo seoul256
-
 " set line lenght indicator
-set colorcolumn=100
+set colorcolumn=120
 
 " Disable backup and swapfiles
 set backupdir=~/.tmp
@@ -82,9 +82,6 @@ set incsearch
 
 " Highlighting search
  set hlsearch
-
-" automatically adjust cwd to dir in which the file which is edited is located
-"set autochdir
 
 " background: Is a "light" or "dark" background used?
  set background=dark
@@ -137,22 +134,18 @@ set softtabstop=4
 " No tabs (use the appropriate number of spaces for a tab)
 set expandtab
 
-set wildmenu
-
 "=========================================================
 " Abbreviations
 "=========================================================
 " TODO marker
-iab Atd TODO:
+iab Atd TODO NiCo:
+" FIXME marker
+iab Afix FIXME NiCo:
+" INFO marker
+iab Ainf INFO:
 
 " Section separator
 iab Asep =========================================================
-
-" Small Section seperator 1
-iab Aseps1 ####################
-
-" Small Section seperator 2
-iab Aseps2 ********************
 
 " The lower letter alphabet
 iab Aalpha abcdefghijklmnopqrstuvwxyz
@@ -192,9 +185,6 @@ nnoremap <Leader>o :TagbarToggle<CR>
 nnoremap <Leader>g :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " clang format integration
  nnoremap <Leader>f :pyf /usr/local/share/clang/clang-format.py<cr>
-" Run Astyle on current file
-"nnoremap <Leader>f :!astyle %<CR><CR>
-
 
 " *******************
 " - C/C++ Mappings  -
@@ -202,9 +192,6 @@ nnoremap <Leader>g :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap <Leader>u :r !header uuid<CR>
 nnoremap <Leader>ug :r !header guard<CR>
 nnoremap <Leader>uh :r !header template<CR>
-
-
-
 
 " *******************
 " - Quickfix Window -
@@ -219,7 +206,6 @@ nnoremap <Leader>j :cnext<CR>
 nnoremap <Leader>k :cprevious<CR>
 " move to error under the cursor
 nnoremap <Leader>, :.cc<CR>
-
 
 " **********************
 " - HexEditor Settings -
