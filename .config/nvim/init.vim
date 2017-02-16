@@ -8,41 +8,41 @@
 " TODO's:
 " ======
 " * Add build detection and automatically adjust makeprg
-" * Add git support (fugetive)
 " * Add Syntastic for Syntax error detection
 " * Add Plugin to switch between Header and Source File
 " * Add Template Plugin
-" * Install and Add rust support for YCM
-" * Add YCM setting for rust source file of stdlib
+" * Add Suround Plugin
+" * Add latest rust plugin
 
 "=========================================================
 " Plug (Plugin manager settings)
 "=========================================================
 call plug#begin('~/.local/share/nvim/plugged')
-    " Color Scheme
+    " --- Color Scheme's ---
     Plug 'junegunn/seoul256.vim'
-    " Status line
+    Plug 'https://github.com/vim-scripts/Guardian.git'
+    Plug 'https://github.com/vim-scripts/Distinguished.git'
+    Plug 'https://github.com/vim-scripts/Solarized.git'
+    Plug 'https://github.com/vim-scripts/autoSolarize.git'
+    Plug 'https://github.com/vim-scripts/Railscasts-Theme-GUIand256color.git'
+    Plug 'https://github.com/vim-scripts/jellybeans.vim.git'
+    " --- Status line ---
     Plug 'bling/vim-airline'
-    " File Browser
-    Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-    " Outline
+    " --- Outline ---
     Plug 'Tagbar'
-    " Rust
+    " --- Rust ---
     Plug 'rust-lang/rust.vim'
-    " Wiki
-    Plug 'vimwiki'
-    " Autocompletion / Code naviagation
+    " -- Autocompletion / Code-Navigation ---
+    Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'https://github.com/Valloric/YouCompleteMe.git', {'on': 'YcmCompleter' , 'do': './install.py --all'}
-    " C/C++ Syntax Error Detection
-    " TBD add syntastic
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " LLVm support plugin (Syntax files for Table gen etc.)
-    " Plug 'https://github.com/llvm-mirror/llvm.git',  {'rtp': '/utils/vim'}
-    " Git
+     Plug 'https://github.com/llvm-mirror/llvm.git',  {'rtp': '/utils/vim'}
+    " --- Git ---
     Plug 'https://github.com/tpope/vim-fugitive.git'
     Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
-    " LLDB Debugger
-    Plug 'critiqjo/lldb.nvim'
+    " --- Misc ---
+    Plug 'tpope/vim-surround'
 call plug#end()
 
 "=========================================================
@@ -284,6 +284,6 @@ inoremap jk <Esc>
 " - Rust-Settings        -
 "*************************
 let g:ycm_rust_src_path ='~/.multirust/toolchains/stable-x86_64-apple-darwin//lib/rustlib/src/rust'
-
+let g:rustfmt_autosave = 1
 autocmd BufRead *.rs :setlocal tags=rusty-tags.vi;/
 autocmd BufWrite *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&"
