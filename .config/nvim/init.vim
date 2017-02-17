@@ -271,5 +271,4 @@ inoremap jk <Esc>
 "*************************
 let g:ycm_rust_src_path ='~/.multirust/toolchains/stable-x86_64-apple-darwin//lib/rustlib/src/rust'
 let g:rustfmt_autosave = 1
-autocmd BufRead *.rs :setlocal tags=rusty-tags.vi;/
-autocmd BufWrite *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&"
+
