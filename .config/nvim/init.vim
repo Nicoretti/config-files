@@ -199,7 +199,7 @@ nnoremap <Leader>uh :r !header template<CR>
 " open quickfix window
 nnoremap <Leader>q :cope<CR>
 " close quick fix window
-nnoremap <Leader>qc :ccl<CR>
+nnoremap <Leader>Q :ccl<CR>
 " move to next erorr
 nnoremap <Leader>j :cnext<CR>
 " move to previous erorr
