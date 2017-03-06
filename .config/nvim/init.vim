@@ -221,6 +221,7 @@ nnoremap <Leader>b :set binary! <CR>
 " - YCM Settings -
 " ****************
 "let g:ycm_rust_src_path = '/usr/local/rust/rustc-1.5.0/src'
+let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
 nnoremap <Leader>d :YcmCompleter GetDoc<CR>
 nnoremap <Leader><enter> :YcmCompleter GoToInclude<CR>
 nnoremap <Leader>T :YcmCompleter GetType<CR>
