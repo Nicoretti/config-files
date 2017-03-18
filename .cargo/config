@@ -1,0 +1,10 @@
+[cargo-new]
+name = "Nicola Coretti"
+email = "nico.coretti@gmail.com"
+vcs = "git"
+
+[alias]
+b = "build"
+t = "test"
+r = "run"
+rr = "run --release"
