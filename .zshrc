@@ -23,4 +23,5 @@ export PATH="$HOME/.cargo/bin:$PATH" # Add rustup to path
 # =========================================================
 # Configuration/Dofile management
 # =========================================================
-alias cfg='/usr/local/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+GIT_CMD=`command -v git`
+alias cfg='${GIT_CMD} --git-dir=$HOME/.cfg/ --work-tree=$HOME'
