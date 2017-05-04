@@ -31,6 +31,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'bling/vim-airline'
     " --- Outline ---
     Plug 'Tagbar'
+    " --- Code formating --
+    Plug 'Chiel92/vim-autoformat'
     " --- Rust ---
     Plug 'rust-lang/rust.vim'
     " -- Autocompletion / Code-Navigation ---
@@ -182,6 +184,7 @@ nnoremap <Leader>w :set list! <CR>
 " Toggle Tagbar
 nnoremap <Leader>o :TagbarToggle<CR>
 " grep for word under the cursor
+set grepprg=rg\ --vimgrep
 nnoremap <Leader>g :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " clang format integration
  nnoremap <Leader>f :pyf /usr/local/share/clang/clang-format.py<cr>
@@ -250,7 +253,7 @@ nnoremap <Leader>p :FZF<CR>
 " Soround selected visual block with ""
 vnoremap <Leader>" ox<esc>i"<esc>pa"<esc>
 " clang format integration
-vnoremap <Leader>f :pyf /usr/local/share/clang/clang-format.py<cr>
+nnoremap <Leader>f :Autoformat<cr>
 
 "*************************
 " - Checkfile           -
