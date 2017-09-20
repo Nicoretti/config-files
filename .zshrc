@@ -2,7 +2,8 @@
 # ZSH specifics
 # =========================================================
 plugins=(cargo themes rust rustup pip python web-search fzf diab taskwarrior)
-ZSH_THEME="arrow"
+# Favorites: "arrow"
+ZSH_THEME="agnoster"
 export ZSH="${HOME}/.oh-my-zsh"
 export ZSH_CUSTOM="${HOME}/.oh-my-zsh-custom-config"
 source $ZSH/oh-my-zsh.sh
@@ -25,3 +26,5 @@ export PATH="$HOME/.cargo/bin:$PATH" # Add rustup to path
 # =========================================================
 GIT_CMD=`command -v git`
 alias cfg='${GIT_CMD} --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
