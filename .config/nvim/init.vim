@@ -73,6 +73,9 @@ if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor
 endif
 
+" Activate mouse support
+set mouse=a
+
 " Activate command line completion
 set wildmenu
 
