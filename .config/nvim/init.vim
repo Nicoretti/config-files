@@ -30,17 +30,17 @@ call plug#begin('~/.local/share/nvim/plugged')
     " --- Status line ---
     Plug 'bling/vim-airline'
     " --- Outline ---
-    Plug 'Tagbar'
+    Plug 'majutsushi/tagbar'
     " --- Code formating --
     Plug 'Chiel92/vim-autoformat'
     " --- Rust ---
     Plug 'rust-lang/rust.vim'
     " -- Autocompletion / Code-Navigation ---
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-    Plug 'https://github.com/Valloric/YouCompleteMe.git', {'on': 'YcmCompleter' , 'do': './install.py --all'}
+    "Plug 'https://github.com/Valloric/YouCompleteMe.git', {'on': 'YcmCompleter' , 'do': './install.py --all'}
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " LLVm support plugin (Syntax files for Table gen etc.)
-     Plug 'https://github.com/llvm-mirror/llvm.git',  {'rtp': '/utils/vim'}
+    " Plug 'https://github.com/llvm-mirror/llvm.git',  {'rtp': '/utils/vim'}
     " --- Git ---
     Plug 'https://github.com/tpope/vim-fugitive.git'
     Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
@@ -187,8 +187,7 @@ nnoremap <Leader>w :set list! <CR>
 " Toggle Tagbar
 nnoremap <Leader>o :TagbarToggle<CR>
 " grep for word under the cursor
-set grepprg=rg\ --vimgrep
-nnoremap <Leader>g :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap <Leader>g :grep! <cword> <CR>:cw<CR>
 " clang format integration
  nnoremap <Leader>f :pyf /usr/local/share/clang/clang-format.py<cr>
 
@@ -276,7 +275,8 @@ inoremap jk <Esc>
 "*************************
 " - Rust-Settings        -
 "*************************
-let g:ycm_rust_src_path ='~/.multirust/toolchains/stable-x86_64-apple-darwin//lib/rustlib/src/rust'
+"let g:ycm_rust_src_path ='~/.multirust/toolchains/stable-x86_64-apple-darwin//lib/rustlib/src/rust'
+let g:rustfmt_command = "rustup run nightly rustfmt"
 let g:rustfmt_autosave = 1
 
 " Add Tagbar support for rust
