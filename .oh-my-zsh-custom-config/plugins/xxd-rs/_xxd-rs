@@ -1,0 +1,131 @@
+#compdef xxd-rs
+
+_xxd-rs() {
+    typeset -A opt_args
+    typeset -a _arguments_options
+    local ret=1
+
+    if is-at-least 5.2; then
+        _arguments_options=(-s -S -C)
+    else
+        _arguments_options=(-s -C)
+    fi
+
+    local context curcontext="$curcontext" state line
+    _arguments "${_arguments_options[@]}" \
+'-i+[Input file which shall be used (default: stdin)]' \
+'--input-file=[Input file which shall be used (default: stdin)]' \
+'-o+[File to which the output will be written (default: stdout)]' \
+'--output-file=[File to which the output will be written (default: stdout)]' \
+'-s+[Offset in the file where to start reading]' \
+'--seek=[Offset in the file where to start reading]' \
+'-l+[Amount of bytes which shall be read]' \
+'--length=[Amount of bytes which shall be read]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+":: :_xxd-rs_commands" \
+"*::: :->A rust based clone of the all time classic xxd tool" \
+&& ret=0
+    case $state in
+    (A rust based clone of the all time classic xxd tool)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:xxd-rs-command-$line[1]:"
+        case $line[1] in
+            (dump)
+_arguments "${_arguments_options[@]}" \
+'-f+[Specifies the output format for the value (default: hex)]: :(Hex hex bin oct dec)' \
+'--format=[Specifies the output format for the value (default: hex)]: :(Hex hex bin oct dec)' \
+'-g+[Separate  the output of every <bytes> bytes (two hex characters or eight bit-digits each) by a whitespace.]' \
+'--group-size=[Separate  the output of every <bytes> bytes (two hex characters or eight bit-digits each) by a whitespace.]' \
+'-c+[Specifies the amount of output columns]' \
+'--columns=[Specifies the amount of output columns]' \
+'-i+[Input file which shall be used (default: stdin)]' \
+'--input-file=[Input file which shall be used (default: stdin)]' \
+'-o+[File to which the output will be written (default: stdout)]' \
+'--output-file=[File to which the output will be written (default: stdout)]' \
+'-s+[Offset in the file where to start reading]' \
+'--seek=[Offset in the file where to start reading]' \
+'-l+[Amount of bytes which shall be read]' \
+'--length=[Amount of bytes which shall be read]' \
+'-p[output in postscript plain hexdump style.]' \
+'--plain-hexdump[output in postscript plain hexdump style.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(generate)
+_arguments "${_arguments_options[@]}" \
+'-t+[Specifies a template file which shall be used for generation (default: c)]: :(c cpp rust python)' \
+'--template=[Specifies a template file which shall be used for generation (default: c)]: :(c cpp rust python)' \
+'-i+[Input file which shall be used (default: stdin)]' \
+'--input-file=[Input file which shall be used (default: stdin)]' \
+'-o+[File to which the output will be written (default: stdout)]' \
+'--output-file=[File to which the output will be written (default: stdout)]' \
+'-s+[Offset in the file where to start reading]' \
+'--seek=[Offset in the file where to start reading]' \
+'-l+[Amount of bytes which shall be read]' \
+'--length=[Amount of bytes which shall be read]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" \
+'-i+[Input file which shall be used (default: stdin)]' \
+'--input-file=[Input file which shall be used (default: stdin)]' \
+'-o+[File to which the output will be written (default: stdout)]' \
+'--output-file=[File to which the output will be written (default: stdout)]' \
+'-s+[Offset in the file where to start reading]' \
+'--seek=[Offset in the file where to start reading]' \
+'-l+[Amount of bytes which shall be read]' \
+'--length=[Amount of bytes which shall be read]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+}
+
+(( $+functions[_xxd-rs_commands] )) ||
+_xxd-rs_commands() {
+    local commands; commands=(
+        "dump:Dumps an input file in the appropriate output format" \
+"generate:Generates a source file containing the specified file as array" \
+"help:Prints this message or the help of the given subcommand(s)" \
+    )
+    _describe -t commands 'xxd-rs commands' commands "$@"
+}
+(( $+functions[_xxd-rs__dump_commands] )) ||
+_xxd-rs__dump_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'xxd-rs dump commands' commands "$@"
+}
+(( $+functions[_xxd-rs__generate_commands] )) ||
+_xxd-rs__generate_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'xxd-rs generate commands' commands "$@"
+}
+(( $+functions[_xxd-rs__help_commands] )) ||
+_xxd-rs__help_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'xxd-rs help commands' commands "$@"
+}
+
+_xxd-rs "$@"
