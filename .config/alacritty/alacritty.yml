@@ -154,38 +154,35 @@ persistent_logging: false
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
+# Colors (Seoul256)
 colors:
   # Default colors
   primary:
-    background: '0x2b303b'
-    foreground: '0xc0c5ce'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x2b303b'
-    cursor: '0xc0c5ce'
+    background: '0x3a3a3a'
+    foreground: '0xd0d0d0'
 
   # Normal colors
   normal:
-    black:   '0x2b303b'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x8fa1b3'
-    magenta: '0xb48ead'
-    cyan:    '0x96b5b4'
-    white:   '0xc0c5ce'
+    black:   '0x4e4e4e'
+    red:     '0xd68787'
+    green:   '0x5f865f'
+    yellow:  '0xd8af5f'
+    blue:    '0x85add4'
+    magenta: '0xd7afaf'
+    cyan:    '0x87afaf'
+    white:   '0xd0d0d0'
 
   # Bright colors
   bright:
-    black:   '0x65737e'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x8fa1b3'
-    magenta: '0xb48ead'
-    cyan:    '0x96b5b4'
-    white: '0xeff1f5'
+    black:   '0x626262'
+    red:     '0xd75f87'
+    green:   '0x87af87'
+    yellow:  '0xffd787'
+    blue:    '0xadd4fb'
+    magenta: '0xffafaf'
+    cyan:    '0x87d7d7'
+    white:   '0xe4e4e4'
+
 
   # Indexed Colors
   #
