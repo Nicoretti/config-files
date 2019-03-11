@@ -264,7 +264,7 @@ nnoremap <leader>c :cexpr system('checkfile ' . shellescape(expand('%')))<cr>:co
 "*************************
 " - Fixfile              -
 "*************************
-nnoremap <leader>F :!fixfile %<cr>
+nnoremap <leader>F :% !trailing<cr>
 
 "*************************
 " - Insert-Mode Mappings -
