@@ -279,38 +279,3 @@ inoremap jk <Esc>
 let g:rustfmt_command = "rustup run nightly rustfmt"
 let g:rustfmt_autosave = 1
 
-" Add Tagbar support for rust
-" Based on universal-ctags (https://github.com/universal-ctags/ctags)
-let g:tagbar_type_rust = {
-    \ 'ctagstype' : 'Rust',
-    \ 'kinds' : [
-        \ 'n:modules:0:0',
-        \ 's:structs::0:1',
-        \ 'i:traits:0:1',
-        \ 'c:implementation blocks:0:1',
-        \ 'f:functions:0:1',
-        \ 'g:enums:0:0',
-        \ 't:typedefs:0:0',
-        \ 'v:global variables:0:0',
-        \ 'M:macros:0:0',
-        \ 'm:members:0:0',
-        \ 'e:enum variants:0:0',
-        \ 'F:methods:0:0',
-    \ ],
-    \ 'sro' : '::',
-    \ 'kind2scope' : {
-        \ 'g' : 'enum',
-        \ 's' : 'struct',
-        \ 'n' : 'module',
-        \ 'i' : 'trait',
-        \ 'c' : 'implementation',
-    \ },
-    \ 'scope2kind' : {
-        \ 'enum' : 'g',
-        \ 'struct' : 's',
-        \ 'module' : 'n',
-        \ 'trait' : 'i',
-        \ 'implementation' : 'c',
-    \ }
-\ }
-
