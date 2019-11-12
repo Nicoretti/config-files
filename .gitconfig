@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/nicola.coretti/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = nvim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -12,7 +12,7 @@
 [rebase]
 	default = current
 [commit]
-	template = /Users/nicola.coretti/.gitcommit_template
+	template = ~/.gitcommit_template
 [user]
 	name = Nicola Coretti
 	email = nicola.coretti@esrlabs.com
