@@ -21,19 +21,13 @@
 call plug#begin('~/.local/share/nvim/plugged')
     " --- Color Scheme's ---
     Plug 'junegunn/seoul256.vim'
-    Plug 'https://github.com/vim-scripts/Guardian.git'
-    Plug 'https://github.com/vim-scripts/Distinguished.git'
     Plug 'https://github.com/vim-scripts/Solarized.git'
-    Plug 'https://github.com/vim-scripts/autoSolarize.git'
-    Plug 'https://github.com/vim-scripts/Railscasts-Theme-GUIand256color.git'
     Plug 'https://github.com/vim-scripts/jellybeans.vim.git'
     " --- Status line ---
-    Plug 'bling/vim-airline'
+    Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     " --- Outline ---
     Plug 'majutsushi/tagbar'
-    " --- Code formating --
-    Plug 'Chiel92/vim-autoformat'
     " --- Rust ---
     Plug 'rust-lang/rust.vim'
     " -- Autocompletion / Code-Navigation ---
@@ -41,8 +35,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    " LLVm support plugin (Syntax files for Table gen etc.)
-    " Plug 'https://github.com/llvm-mirror/llvm.git',  {'rtp': '/utils/vim'}
     " --- Git ---
     Plug 'https://github.com/tpope/vim-fugitive.git'
     Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
