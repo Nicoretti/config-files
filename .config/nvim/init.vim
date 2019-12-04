@@ -29,6 +29,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'https://github.com/vim-scripts/jellybeans.vim.git'
     " --- Status line ---
     Plug 'bling/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
     " --- Outline ---
     Plug 'majutsushi/tagbar'
     " --- Code formating --
@@ -292,4 +293,4 @@ inoremap jk <Esc>
 "let g:ycm_rust_src_path ='~/.multirust/toolchains/stable-x86_64-apple-darwin//lib/rustlib/src/rust'
 let g:rustfmt_command = "rustup run nightly rustfmt"
 let g:rustfmt_autosave = 1
-
+let g:airline_theme='bubblegum'
