@@ -1,0 +1,13 @@
+[t32]
+   # REQUIRED
+   sys  = /installation/dir/of/t32
+   # OPTIONAL
+   tmp  = /tmp/dir/of/t32
+   # OPTIONAL
+   help = /help/dir/of/t32 # default value = SYS_PATH/pdf
+
+[targets]
+   # AT LEAST ONE ENTRY IS REQUIRED
+   arm     = /path/to/the/t32marm-qt
+   ppc     = /path/to/the/t32mppc-qt
+   tricore = /path/to/the/t32mtc-qt

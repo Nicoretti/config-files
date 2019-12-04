@@ -37,7 +37,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'rust-lang/rust.vim'
     " -- Autocompletion / Code-Navigation ---
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-    "Plug 'https://github.com/Valloric/YouCompleteMe.git', {'on': 'YcmCompleter' , 'do': './install.py --all'}
+    Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " LLVm support plugin (Syntax files for Table gen etc.)
     " Plug 'https://github.com/llvm-mirror/llvm.git',  {'rtp': '/utils/vim'}
@@ -222,14 +223,26 @@ nnoremap <Leader>x :%!xxd -r <CR>
 " toggle binary mode  (used to save files without newline)
 nnoremap <Leader>b :set binary! <CR>
 
-" ****************
-" - YCM Settings -
-" ****************
-"let g:ycm_rust_src_path = '/usr/local/rust/rustc-1.5.0/src'
-let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
-nnoremap <Leader>d :YcmCompleter GetDoc<CR>
-nnoremap <Leader><enter> :YcmCompleter GoToInclude<CR>
-nnoremap <Leader>T :YcmCompleter GetType<CR>
+" *************************
+" - LanguageClient neovim -
+" *************************
+" " Required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'python': ['/usr/local/bin/pyls '],
+    \ 'python3': ['/usr/local/bin/pyls '],
+    \ }
+nnoremap <Leader><SPACE> :call LanguageClient_contextMenu()<CR>
+nnoremap <Leader>d :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <Leader>r :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent> <Leader>i :call LanguageClient#textDocument_hover()<CR>
+
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#source('LanguageClient',
+            \ 'min_pattern_length',
+            \ 2)
 
 " ***********************
 " - NerdTree  Settings -
@@ -247,7 +260,8 @@ nnoremap <ENTER> A<CR><ESC>
 " - FZF  Settings -
 " *****************
 " Open FZF (Fuzzy File Search)
-nnoremap <Leader>p :FZF<CR>
+nnoremap <Leader>p :FZF -m<CR>
+
 
 "*************************
 " - Visual-Mode Mappings -

@@ -1,0 +1,153 @@
+# Recent settings file for Wireshark 3.0.5.
+#
+# This file is regenerated each time Wireshark is quit.
+# So be careful, if you want to make manual changes here.
+
+######## Recent capture files (latest last), cannot be altered through command line ########
+
+recent.capture_file: /Users/nicola.coretti/Downloads/trace.pcap
+recent.capture_file: /Users/nicola.coretti/Downloads/new_trace
+recent.capture_file: /Users/nicola.coretti/Downloads/some_ip_only.pcap
+recent.capture_file: /Users/nicola.coretti/Downloads/train.pcapng
+recent.capture_file: /Users/nicola.coretti/Downloads/someip.pcap
+recent.capture_file: /Users/nicola.coretti/Documents/esr-notebook/src/cdc/script-dev/bugs/CDC2018TE-139/artifacts/converted_2019-01-22_11.00.14/20190115[162825]_20190115[164130]_Eth1.pcap
+recent.capture_file: /Users/nicola.coretti/Downloads/dump-eth-_SomeIP-Lan_2018-12-04.0.pcap
+recent.capture_file: /Users/nicola.coretti/Documents/Documents/bugs/CDC2018-1186/dump-eth-_SomeIP-Lan_2018-07-02.0.pcap
+recent.capture_file: /Users/nicola.coretti/Downloads/bcpvlan.dump
+recent.capture_file: /Users/nicola.coretti/Downloads/dump-eth-_SomeIP-Lan_2019-09-16.0.pcap
+
+######## Recent capture filters (latest last), cannot be altered through command line ########
+
+recent.capture_filter: host 172.31.0.13
+recent.capture_filter.en0: host 172.31.0.13
+
+######## Recent display filters (latest last), cannot be altered through command line ########
+
+recent.display_filter: tcp.stream eq 0
+recent.display_filter: (ip.addr eq 160.48.199.16 or ip.addr eq 160.48.199.99) and (tcp.port eq 30501 or tcp.port eq 30505)
+recent.display_filter: ip.addr == 172.31.0.215
+recent.display_filter: someip
+recent.display_filter: tcp
+recent.display_filter: http
+recent.display_filter: MessageID == 4294934784
+recent.display_filter: cdc
+recent.display_filter: (ip.addr eq 160.48.199.16 and ip.addr eq 160.48.199.99) and (tcp.port eq 30501 and tcp.port eq 30505)
+recent.display_filter: ip.dst == 160.48.199.99
+
+# Main window geometry.
+# Decimal numbers.
+gui.geometry_main_x: -1440
+gui.geometry_main_y: -555
+gui.geometry_main_width: 1440
+gui.geometry_main_height: 2515
+
+# Main window maximized.
+# TRUE or FALSE (case-insensitive).
+gui.geometry_main_maximized: TRUE
+
+# Statusbar left pane size.
+# Decimal number.
+gui.geometry_status_pane: 250
+
+# Statusbar middle pane size.
+# Decimal number.
+gui.geometry_status_pane_right: 250
+
+# Last used Configuration Profile.
+gui.last_used_profile: Default
+
+# WLAN statistics upper pane size.
+# Decimal number.
+gui.geometry_status_wlan_stats_pane: 200
+
+# Warn if running with elevated permissions (e.g. as root).
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_elevated: TRUE
+
+# Warn if npf.sys isn't loaded on Windows >= 6.0.
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_no_npf: TRUE
+
+# Geometry and maximized state of FollowStreamDialog window.
+# Decimal integers.
+gui.geom.FollowStreamDialog.x: 1375
+gui.geom.FollowStreamDialog.y: 23
+gui.geom.FollowStreamDialog.width: 1436
+gui.geom.FollowStreamDialog.height: 1154
+# TRUE or FALSE (case-insensitive).
+gui.geom.FollowStreamDialog.maximized: FALSE
+
+# Geometry and maximized state of PreferencesDialog window.
+# Decimal integers.
+gui.geom.PreferencesDialog.x: 435
+gui.geom.PreferencesDialog.y: 288
+gui.geom.PreferencesDialog.width: 810
+gui.geom.PreferencesDialog.height: 475
+# TRUE or FALSE (case-insensitive).
+gui.geom.PreferencesDialog.maximized: FALSE
+
+# Geometry and maximized state of WEP and WPA Decryption Keys window.
+# Decimal integers.
+gui.geom.WEP and WPA Decryption Keys.x: 1036
+gui.geom.WEP and WPA Decryption Keys.y: 518
+gui.geom.WEP and WPA Decryption Keys.width: 566
+gui.geom.WEP and WPA Decryption Keys.height: 403
+# TRUE or FALSE (case-insensitive).
+gui.geom.WEP and WPA Decryption Keys.maximized: FALSE
+
+# Geometry and maximized state of ColoringRulesDialog window.
+# Decimal integers.
+gui.geom.ColoringRulesDialog.x: 427
+gui.geom.ColoringRulesDialog.y: 162
+gui.geom.ColoringRulesDialog.width: 1706
+gui.geom.ColoringRulesDialog.height: 1116
+# TRUE or FALSE (case-insensitive).
+gui.geom.ColoringRulesDialog.maximized: FALSE
+
+# Geometry and maximized state of Funnel Evaluate Lua window.
+# Decimal integers.
+gui.geom.Funnel Evaluate Lua.x: 1400
+gui.geom.Funnel Evaluate Lua.y: 466
+gui.geom.Funnel Evaluate Lua.width: 620
+gui.geom.Funnel Evaluate Lua.height: 450
+# TRUE or FALSE (case-insensitive).
+gui.geom.Funnel Evaluate Lua.maximized: FALSE
+
+# Geometry and maximized state of PacketDialog window.
+# Decimal integers.
+gui.geom.PacketDialog.x: 362
+gui.geom.PacketDialog.y: 513
+gui.geom.PacketDialog.width: 1152
+gui.geom.PacketDialog.height: 804
+# TRUE or FALSE (case-insensitive).
+gui.geom.PacketDialog.maximized: FALSE
+
+# Geometry and maximized state of Funnel Console window.
+# Decimal integers.
+gui.geom.Funnel Console.x: 1400
+gui.geom.Funnel Console.y: 466
+gui.geom.Funnel Console.width: 620
+gui.geom.Funnel Console.height: 450
+# TRUE or FALSE (case-insensitive).
+gui.geom.Funnel Console.maximized: FALSE
+
+# Geometry and maximized state of DisplayFilterExpressionDialog window.
+# Decimal integers.
+gui.geom.DisplayFilterExpressionDialog.x: 0
+gui.geom.DisplayFilterExpressionDialog.y: 23
+gui.geom.DisplayFilterExpressionDialog.width: 1145
+gui.geom.DisplayFilterExpressionDialog.height: 1390
+# TRUE or FALSE (case-insensitive).
+gui.geom.DisplayFilterExpressionDialog.maximized: FALSE
+
+# Custom colors.
+# List of custom colors selected in Qt color picker.
+gui.custom_colors: 
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff"
