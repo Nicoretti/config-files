@@ -226,9 +226,11 @@ let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'python': ['/usr/local/bin/pyls'],
     \ 'python3': ['/usr/local/bin/pyls'],
-    \ 'c': ['/usr/local/bin/ccls'],
-    \ 'cpp': ['/usr/local/bin/ccls'],
     \ }
+"    \ 'c': ['/usr/local/bin/ccls'],
+"    \ 'cpp': ['/usr/local/bin/ccls'],
+"
+
 nnoremap <Leader><SPACE> :call LanguageClient_contextMenu()<CR>
 nnoremap <Leader>d :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <Leader>r :call LanguageClient#textDocument_rename()<CR>
