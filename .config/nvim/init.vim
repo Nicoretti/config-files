@@ -5,15 +5,6 @@
 " Version:  0.1.0
 "=========================================================
 "
-" TODO's:
-" ======
-" * Add build detection and automatically adjust makeprg
-" * Add Syntastic for Syntax error detection
-" * Add Plugin to switch between Header and Source File
-" * Add Template Plugin
-" * Add Suround Plugin
-" * Add latest rust plugin
-" * Add automation for header guard insertion
 
 "=========================================================
 " Plug (Plugin manager settings)
