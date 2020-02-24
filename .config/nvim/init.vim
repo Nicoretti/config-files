@@ -1,12 +1,4 @@
 "=========================================================
-" File:     init.vim
-" Autor:    Nicola Coretti
-" Contact:  nico.coretti@gmail.com
-" Version:  0.1.0
-"=========================================================
-"
-
-"=========================================================
 " Plug (Plugin manager settings)
 "=========================================================
 call plug#begin('~/.local/share/nvim/plugged')
@@ -21,11 +13,15 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'majutsushi/tagbar'
     " --- Rust ---
     Plug 'rust-lang/rust.vim'
+    " --- C/CPP ---
+    Plug 'kburdett/vim-nuuid'
     " -- Autocompletion / Code-Navigation ---
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
     " --- Git ---
     Plug 'https://github.com/tpope/vim-fugitive.git'
     Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
@@ -54,8 +50,8 @@ set ofu=syntaxcomplete#Complete
 set listchars=eol:$,tab:^T,trail:^,extends:>,precedes:<
 
 " setup faster grep
-if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor
+if executable('rg')
+    set grepprg=rg
 endif
 
 " Activate mouse support
@@ -227,11 +223,6 @@ nnoremap <Leader>d :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <Leader>r :call LanguageClient#textDocument_rename()<CR>
 nnoremap <silent> <Leader>i :call LanguageClient#textDocument_hover()<CR>
 
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#source('LanguageClient',
-            \ 'min_pattern_length',
-            \ 2)
-
 " ***********************
 " - NerdTree  Settings -
 " ***********************
@@ -250,6 +241,29 @@ nnoremap <ENTER> A<CR><ESC>
 " Open FZF (Fuzzy File Search)
 nnoremap <Leader>p :FZF -m<CR>
 
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" Using floating windows of Neovim to start fzf
+if has('nvim-0.4.0')
+  let $FZF_DEFAULT_OPTS .= '--color=bg:#20242C --border --layout=reverse'
+  function! FloatingFZF()
+    let width = float2nr(&columns * 0.9)
+    let height = float2nr(&lines * 0.6)
+    let opts = { 'relative': 'editor',
+      \ 'row': (&lines - height) / 2,
+      \ 'col': (&columns - width) / 2,
+      \ 'width': width,
+      \ 'height': height,
+      \ 'style': 'minimal'
+      \}
+    let win = nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
+    call setwinvar(win, '&winhighlight', 'NormalFloat:TabLine')
+  endfunction
+  let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+endif
 
 "*************************
 " - Visual-Mode Mappings -
@@ -281,3 +295,26 @@ inoremap jk <Esc>
 let g:rustfmt_command = "rustup run nightly rustfmt"
 let g:rustfmt_autosave = 1
 let g:airline_theme='bubblegum'
+
+"*************************
+" - C/CPP - Settings     -
+"*************************
+" set UUID case to upper
+let g:nuuid_case = "upper"
+" set no mappings so we can customize ours
+let g:nuuid_no_mappings = 1
+function! GenIncludeGuard()
+    let guard  = join(["INCLUDE_GUARD", substitute(NuuidNewUuid(), '-', '_', 'g')], "_")
+    let ifndef = join(["#ifndef",   guard], " ")
+    let define = join(["#define",   guard], " ")
+    let endif  = join(["#endif //", guard], " ")
+    " Extra empty strings included here to insert another newline before the endif
+    return join([ifndef, define, "", "", "", endif], "\n")
+endfunction
+nnoremap <leader>u i<C-R>=GenIncludeGuard()<CR><Esc>
+
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#source('LanguageClient',
+            \ 'min_pattern_length',
+            \ 2)
+
