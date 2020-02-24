@@ -31,3 +31,31 @@ if has('nvim-0.4.0')
   endfunction
   let g:fzf_layout = { 'window': 'call FloatingFZF()' }
 endif
+
+nmap <Leader>fi :call FzfFilesImplHdrFile()<CR>
+
+
+function! FzfFilesImplHdrFile()
+python3 << endpython
+
+import vim
+from os import path
+
+extmap = {
+    ".cpp": ".h",
+    ".h": ".cpp",
+}
+
+def getFilenameFromBuffer(buffer):
+    fullname = buffer.name
+    return path.basename(fullname)
+
+def getHdrImplFilename():
+    currentFile = getFilenameFromBuffer(vim.current.buffer)
+    name, ext = path.splitext(currentFile)
+    return "{}{}".format(name, extmap.get(ext, ext))
+
+vim.command("call fzf#vim#files('.', {'options':'--query " + getHdrImplFilename() + "'})")
+
+endpython
+endfunc
