@@ -7,7 +7,7 @@ ZSH_THEME="agnoster"
 export ZSH="${HOME}/.oh-my-zsh"
 export ZSH_CUSTOM="${HOME}/.oh-my-zsh-custom-config"
 source $ZSH/oh-my-zsh.sh
-export EDITOR=nivm
+export EDITOR=nvim
 
 # =========================================================
 # Update PATH
