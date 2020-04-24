@@ -7,6 +7,12 @@ set noswapfile
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 
+" enable filetype based formatging
+filetype plugin indent on
+
+"" set formatexpr and formatprg when filetype is cpp
+au FileType cpp setlocal formatexpr= formatprg=clang-format\ -style=file
+
 " adjust how whitespace is shown if (set list) is used
 set listchars=eol:$,tab:^T,trail:^,extends:>,precedes:<
 
