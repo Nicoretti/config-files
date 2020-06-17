@@ -18,7 +18,7 @@ set listchars=eol:$,tab:^T,trail:^,extends:>,precedes:<
 
 " setup faster grep
 if executable('rg')
-    set grepprg=rg
+    set grepprg=rg\ --vimgrep
 endif
 
 " Activate mouse support
