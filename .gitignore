@@ -1,2 +1,3 @@
 # prevent recusrion issues for cfg git
 .cfg
+.cfg-local

@@ -26,7 +26,8 @@ export PATH="$HOME/.t32/bin:$PATH" # Add t32 to the path
 # Configuration/Dofile management
 # =========================================================
 GIT_CMD=`command -v git`
-alias cfg='${GIT_CMD} --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='${GIT_CMD} --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias local-config='${GIT_CMD} --git-dir=$HOME/.cfg-local/ --work-tree=$HOME'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
