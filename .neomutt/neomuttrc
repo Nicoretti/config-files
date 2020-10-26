@@ -1,0 +1,101 @@
+# Colors
+source ~/.neomutt/colors
+
+# Mailboxes
+#set mbox_type=Maildir
+set folder = "~/mail"
+set mbox_type=Maildir
+
+# General
+set header_cache = "~/.cache/neomutt"
+set print_command = "muttprint"
+set print = ask-yes
+set print_split
+
+
+# Crypto
+set pgp_self_encrypt         = yes
+set crypt_use_gpgme          = yes
+set crypt_autosign           = yes
+set crypt_replysign          = yes
+set crypt_replyencrypt       = yes
+set crypt_replysignencrypted = yes
+set postpone_encrypt         = yes
+message-hook '!(~g|~G) ~b"^-----BEGIN\ PGP\ (SIGNED\ )?MESSAGE"' "exec check-traditional-pgp"
+
+set timeout = 10
+# set new_mail_command = "notify-send 'Incoming Subspace Transmission' '\n%n new message(s)' &"
+
+# Sidebar
+set sidebar_visible
+set sidebar_format        = "%D %* %?N?%N/?%?S?%S?"
+set sidebar_width         = 35
+set sidebar_divider_char  = '│'
+set sidebar_short_path
+set sidebar_delim_chars   = "/"
+set sidebar_folder_indent
+set sidebar_indent_string = "  "
+set sidebar_sort_method   = unsorted
+
+
+# Index
+set sort = threads
+set sort_aux = last-date-received
+set collapse_all = yes
+set index_format = "%4C [%Z] %{%Y-%m-%d} |%-32.32L| %s"
+
+# Pagger
+alternative_order text/plain text/html
+set pager_format = "-%Z- %C/%m  |  (%g)%*  -- (%P)"
+set pager_index_lines = 7
+set pager_stop
+set menu_scroll
+unset markers
+
+
+# Sending mail
+set editor=`echo \$EDITOR`
+set edit_headers
+set send_charset = utf-8
+set user_agent = no
+
+
+# Bindings
+bind index,pager \CK sidebar-prev
+bind index,pager \CJ sidebar-next
+bind index,pager \CL sidebar-open
+
+bind pager j next-line
+bind pager k previous-line
+bind pager g noop
+bind pager gg top
+bind pager G bottom
+bind pager \Cu half-up
+bind pager \Cd half-down
+
+bind index g noop
+bind index gg first-entry
+bind index G last-entry
+bind index \Cu half-up
+bind index \Cd half-down
+bind index - collapse-thread
+bind index _ collapse-all
+
+bind editor <Tab> complete-query
+
+bind index,pager @ compose-to-sender
+bind index,pager \CV sidebar-toggle-virtual
+bind index,pager R group-reply
+
+bind index,pager + modify-labels
+
+macro attach s "<save-entry><bol>~/scratch/<eol>" "Save to scratch space"
+
+macro index <f7> "<vfolder-from-query>" "vfolder from notmuch query"
+
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+#source ~/.mutt/mailboxes
+#source ~/.mutt/notmuch
+source "gpg -dq ~/.neomutt/accounts.gpg |"

@@ -1,0 +1,55 @@
+color  status            cyan         black
+color  error             red          default
+color  indicator         brightblack  yellow
+
+color  sidebar_ordinary  white        default
+color  sidebar_flagged   red          default
+color  sidebar_indicator white        blue
+color  sidebar_new       blue         default
+color  sidebar_divider   cyan         default
+
+color  index             white        default '.*'
+color  index_flags       default      default '.*'
+color  index_author      default      default '.*'
+
+color  index_flags       magenta      default '~F'
+color  index_author      magenta      default '~F'
+color  index_subject     magenta      default '~F'
+
+color  index_flags       blue         default '~N|~O'
+color  index_author      blue         default '~N|~O'
+color  index_subject     blue         default '~N|~O'
+
+color  index_author      default      color8  '~v'
+color  index_subject     default      color8  '~v'
+
+color  index_flags       magenta      color8  '~v~(~F)'
+color  index_author      magenta      color8  '~v~(~F)'
+color  index_subject     magenta      color8  '~v~(~F)'
+
+color  index_flags       blue         color8  '~v~(~N|~O)'
+color  index_author      blue         color8  '~v~(~N|~O)'
+color  index_subject     blue         color8  '~v~(~N|~O)'
+
+color  index_flags       yellow       default '~T'
+color  index_author      yellow       default '~T'
+color  index_subject     yellow       default '~T'
+
+color  hdrdefault        brightgreen  default
+color  header            brightblue   default  "^(Date)"
+color  header            brightyellow default  "^(From)"
+color  header            blue         default  "^(Subject)"
+
+color  attach_headers    cyan         default "^\\[--.*"
+
+color  quoted            blue         default
+color  quoted1           red          default
+color  quoted2           cyan         default
+color  quoted3           yellow       default
+color  quoted4           brightred    default
+
+color  body              brightred    default  "(BAD signature.*)"
+color  body              green        default  "(Good signature from.*)"
+color  body              cyan         default  "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
+
+
