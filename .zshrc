@@ -1,7 +1,7 @@
 # =========================================================
 # ZSH specifics
 # =========================================================
-plugins=(cargo themes rust rustup pip python web-search fzf diab xxd-rs nc-aliases)
+plugins=(cargo themes rust rustup pip python web-search fzf xxd-rs nc-aliases opt)
 # Favorites: "arrow"
 ZSH_THEME="agnoster"
 export ZSH="${HOME}/.oh-my-zsh"
