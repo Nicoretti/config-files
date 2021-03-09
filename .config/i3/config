@@ -1,12 +1,14 @@
 # For more details see  see https://i3wm.org/docs/userguide.html for a complete reference!
 set $mod Mod4
 set $alt Mod1
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -136,12 +138,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
-
 # Font used in i3
 font xft:Hack Nerd Font 10
 
@@ -166,3 +162,6 @@ default_floating_border pixel 2
 
 # GAPS settings
 for_window [class="^.*"] border pixel 2
+
+exec_always --no-startup-id sleep 3; polybar bar
+exec_always --no-startup-id sleep 3; nm-applet
