@@ -26,6 +26,9 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
     " --- Misc ---
     Plug 'tpope/vim-surround'
+    if (executable("go"))
+    Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+    endif
 call plug#end()
 
 " Refine leader
