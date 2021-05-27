@@ -16,6 +16,10 @@ map <leader><p> :action GotoFile<CR>
 map <leader><w> :action EditorToggleShowWhitespaces<CR>
 map <leader><R> :action Run<CR>
 map <leader><D> :action Debug<CR>
+map <leader><d> :action GotoDeclaration<CR>
 
 " === Extentsion ==
 set surround
+set NERDTree
+
+map <leader><n> :NERDTreeToggle<CR>
