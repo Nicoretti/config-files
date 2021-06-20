@@ -82,14 +82,15 @@ gui.geometry_main_lower_pane: 856
 column.width:
         %m, 72,
         %t, 81,
-        %Gt, 81,
+        %Gt, 73,
+        "%Cus:tcp.time_delta", 134,
         %s, 128,
         %d, 128,
         %p, 90,
         %L, 81,
         "%Cus:tcp.len", 150,
         "%Cus:tcp.window_size_value", 88,
-        %i, 995
+        %i, 1260
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".

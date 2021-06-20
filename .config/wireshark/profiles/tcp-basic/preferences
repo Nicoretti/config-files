@@ -216,7 +216,7 @@
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-#gui.column.hidden: 
+gui.column.hidden: 
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
@@ -224,6 +224,7 @@ gui.column.format:
 	"No.", "%m",
 	"Time", "%t",
 	"Delta", "%Gt",
+	"TCP Delta Time", "%Cus:tcp.time_delta:0:R",
 	"Source", "%s",
 	"Destination", "%d",
 	"Protocol", "%p",
@@ -440,7 +441,7 @@ gui.layout_content_3: PDIAGRAM
 
 # Remote capture filter
 # A string
-#extcap.ciscodump.remotefilter: deny tcp host fe80::d781:8c22:e201:9125 any eq 0, deny tcp any eq 0 host fe80::d781:8c22:e201:9125, deny tcp host fe80::aaf:dc1:f9bd:bbd1 any eq 0, deny tcp any eq 0 host fe80::aaf:dc1:f9bd:bbd1, deny tcp host fe80::90be:f7e1:3590:b943 any eq 0, deny tcp any eq 0 host fe80::90be:f7e1:3590:b943, deny tcp host fe80::c8a4:b4fd:f58c:ec8e any eq 0, deny tcp any eq 0 host fe80::c8a4:b4fd:f58c:ec8e, deny tcp host fe80::9cd1:16ff:fe3c:2ca5 any eq 0, deny tcp any eq 0 host fe80::9cd1:16ff:fe3c:2ca5, deny tcp host fe80::9cd1:16ff:fe3c:2ca5 any eq 0, deny tcp any eq 0 host fe80::9cd1:16ff:fe3c:2ca5, deny tcp host fd50:600d:fa39::a34 any eq 0, deny tcp any eq 0 host fd50:600d:fa39::a34, deny tcp host fd50:600d:fa39:0:8d14:992d:5098:2a39 any eq 0, deny tcp any eq 0 host fd50:600d:fa39:0:8d14:992d:5098:2a39, deny tcp host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9 any eq 0, deny tcp any eq 0 host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9, deny tcp host 192.168.1.174 any eq 0, deny tcp any eq 0 host 192.168.1.174, deny tcp host fe80::18f5:3406:fee7:ce4 any eq 0, deny tcp any eq 0 host fe80::18f5:3406:fee7:ce4, deny tcp host fe80::aede:48ff:fe00:1122 any eq 0, deny tcp any eq 0 host fe80::aede:48ff:fe00:1122, deny tcp host fe80::1 any eq 0, deny tcp any eq 0 host fe80::1, permit ip any any
+#extcap.ciscodump.remotefilter: deny tcp host fe80::d781:8c22:e201:9125 any eq 0, deny tcp any eq 0 host fe80::d781:8c22:e201:9125, deny tcp host fe80::aaf:dc1:f9bd:bbd1 any eq 0, deny tcp any eq 0 host fe80::aaf:dc1:f9bd:bbd1, deny tcp host fe80::90be:f7e1:3590:b943 any eq 0, deny tcp any eq 0 host fe80::90be:f7e1:3590:b943, deny tcp host fe80::c8a4:b4fd:f58c:ec8e any eq 0, deny tcp any eq 0 host fe80::c8a4:b4fd:f58c:ec8e, deny tcp host fe80::b8e3:5cff:feec:4570 any eq 0, deny tcp any eq 0 host fe80::b8e3:5cff:feec:4570, deny tcp host fe80::b8e3:5cff:feec:4570 any eq 0, deny tcp any eq 0 host fe80::b8e3:5cff:feec:4570, deny tcp host fd50:600d:fa39::a34 any eq 0, deny tcp any eq 0 host fd50:600d:fa39::a34, deny tcp host fd50:600d:fa39:0:8d14:992d:5098:2a39 any eq 0, deny tcp any eq 0 host fd50:600d:fa39:0:8d14:992d:5098:2a39, deny tcp host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9 any eq 0, deny tcp any eq 0 host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9, deny tcp host 192.168.1.174 any eq 0, deny tcp any eq 0 host 192.168.1.174, deny tcp host fe80::18f5:3406:fee7:ce4 any eq 0, deny tcp any eq 0 host fe80::18f5:3406:fee7:ce4, deny tcp host fe80::aede:48ff:fe00:1122 any eq 0, deny tcp any eq 0 host fe80::aede:48ff:fe00:1122, deny tcp host fe80::1 any eq 0, deny tcp any eq 0 host fe80::1, permit ip any any
 
 # Packets to capture
 # A string
@@ -508,7 +509,7 @@ gui.layout_content_3: PDIAGRAM
 
 # Remote capture filter
 # A string
-#extcap.sshdump.remotefilter: not ((host fe80::d781:8c22:e201:9125 or host fe80::aaf:dc1:f9bd:bbd1 or host fe80::90be:f7e1:3590:b943 or host fe80::c8a4:b4fd:f58c:ec8e or host fe80::9cd1:16ff:fe3c:2ca5 or host fe80::9cd1:16ff:fe3c:2ca5 or host fd50:600d:fa39::a34 or host fd50:600d:fa39:0:8d14:992d:5098:2a39 or host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9 or host 192.168.1.174 or host fe80::18f5:3406:fee7:ce4 or host fe80::aede:48ff:fe00:1122 or host fe80::1) and port 22)
+#extcap.sshdump.remotefilter: not ((host fe80::d781:8c22:e201:9125 or host fe80::aaf:dc1:f9bd:bbd1 or host fe80::90be:f7e1:3590:b943 or host fe80::c8a4:b4fd:f58c:ec8e or host fe80::b8e3:5cff:feec:4570 or host fe80::b8e3:5cff:feec:4570 or host fd50:600d:fa39::a34 or host fd50:600d:fa39:0:8d14:992d:5098:2a39 or host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9 or host 192.168.1.174 or host fe80::18f5:3406:fee7:ce4 or host fe80::aede:48ff:fe00:1122 or host fe80::1) and port 22)
 
 # Packets to capture
 # A string
