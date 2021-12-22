@@ -2,24 +2,25 @@ let mapleader = ","
 inoremap jk <Esc>
 
 " === Mappings ===
-map <leader><r> :action RenameElement<CR>
-map <leader><f> :action ReformatCode<CR>
-map <leader><F> :action Find<CR>
-map <leader><g> :action FindUsages<CR>
-map <leader><O> :action ActivateStructureToolWindow<CR>
-map <leader><o> :action FileStructurePopup<CR>
-map <leader><j> :action GotoNextError<CR>
-map <leader><k> :action GotoPreviousError<CR>
-map <leader><c> :action GotoClass<CR>
-map <leader><s> :action GotoSymbol<CR>
-map <leader><p> :action GotoFile<CR>
-map <leader><w> :action EditorToggleShowWhitespaces<CR>
-map <leader><R> :action Run<CR>
-map <leader><D> :action Debug<CR>
-map <leader><d> :action GotoDeclaration<CR>
+map <leader>p <Action>(SearchEverywhere)
+map <leader>r <Action>(RenameElement)
+map <leader>f <Action>(ReformatCode)
+map <leader>F <Action>(Find)
+map <leader>g <Action>(FindUsages)
+map <leader>O <Action>(ActivateStructureToolWindow)
+map <leader>o <Action>(FileStructurePopup)
+map <leader>j <Action>(GotoNextError)
+map <leader>k <Action>(GotoPreviousError)
+map <leader>c <Action>(GotoClass)
+map <leader>s <Action>(GotoSymbol)
+map <leader>w <Action>(EditorToggleShowWhitespaces)
+map <leader>R <Action>(Run)
+map <leader>D <Action>(Debug)
+map <leader>d <Action>(GotoDeclaration)
 
 " === Extentsion ==
 set surround
 set NERDTree
 
-map <leader><n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
+
