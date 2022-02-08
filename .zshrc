@@ -1,7 +1,7 @@
 # =========================================================
 # ZSH specifics
 # =========================================================
-plugins=(themes rust pip python web-search fzf xxd-rs nc-aliases opt)
+plugins=(themes rust pip python web-search fzf xxd-rs nc-aliases opt poetry)
 # Favorites: "arrow"
 ZSH_THEME="agnoster"
 export ZSH="${HOME}/.oh-my-zsh"
@@ -15,11 +15,8 @@ export EDITOR=nvim
 # Update PATH
 # =========================================================
 export PATH="/usr/local/bin:$PATH"
-# Add RVM to PATH for scripting
-# Add rustup to PATH
-export PATH="$HOME/.cargo/bin:$PATH" # Add rustup to path
-export PATH="$PATH:/usr/local/anaconda3/bin" # Add anaconda to the path
-export PATH="$HOME/.t32/bin:$PATH" # Add t32 to the path
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 [ -f /Users/NiCoretti/.travis/travis.sh ] && source /Users/NiCoretti/.travis/travis.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
