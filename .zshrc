@@ -15,6 +15,7 @@ export EDITOR=nvim
 # Update PATH
 # =========================================================
 export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 
