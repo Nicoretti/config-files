@@ -58,6 +58,16 @@ def compact(repo: Union[Path, str]) -> int:
     return result.returncode
 
 
+def check(repo: Union[Path, str]) -> int:
+    result = run([
+        'borg',
+        'check',
+        '--verbose',
+        f'{repo}'
+    ])
+    return result.returncode
+
+
 def _load_config():
     home = os.environ['HOME']
     config = Path(home) / '.backup-config'
@@ -75,7 +85,7 @@ def main():
         Console.stderr(f"The [borg] command is not available")
         exit(ExitCode.FAILURE)
     repo, paths = _load_config()
-    sys.exit(backup(repo, paths) | compact(repo))
+    sys.exit(backup(repo, paths) | compact(repo) | check(repo))
 
 
 if __name__ == '__main__':
