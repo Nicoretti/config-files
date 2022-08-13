@@ -71,26 +71,24 @@ gui.packet_diagram_field_values: FALSE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 599
+gui.geometry_main_upper_pane: 820
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 856
+gui.geometry_main_lower_pane: 742
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
         %m, 87,
-        %t, 89,
-        %Gt, 73,
-        "%Cus:tcp.time_delta", 134,
-        %s, 292,
-        %d, 150,
+        %t, 96,
+        %Tt, 131,
+        %s, 112,
+        "%Cus:tcp.srcport", 112,
+        %d, 110,
         %p, 90,
         %L, 81,
-        "%Cus:tcp.len", 150,
-        "%Cus:tcp.window_size_value", 88,
-        %i, 12760
+        %i, 2570
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".

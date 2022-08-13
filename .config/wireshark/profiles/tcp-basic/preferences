@@ -292,7 +292,7 @@ gui.layout_content_3: PDIAGRAM
 
 # Interface link-layer header types (Ex: en0(1),en1(143),...)
 # A string
-#capture.devices_linktypes: 
+capture.devices_linktypes: p2p0(12),awdl0(1),llw0(1),utun0(0),en1(1),utun1(0),lo0(0),en0(1),bridge0(1),en2(1),en3(1),en4(1),en5(1),gif0(0),stf0(0),ap1(1),ciscodump(147),randpkt(147),sshdump(147),udpdump(252)
 
 # Interface descriptions (Ex: eth0(eth0 descr),eth1(eth1 descr),...)
 # A string
@@ -308,15 +308,15 @@ gui.layout_content_3: PDIAGRAM
 
 # Interface buffer size (Ex: en0(1),en1(143),...)
 # A string
-#capture.devices_buffersize: 
+capture.devices_buffersize: p2p0(2),awdl0(2),llw0(2),utun0(2),en1(2),utun1(2),lo0(2),en0(2),bridge0(2),en2(2),en3(2),en4(2),en5(2),gif0(2),stf0(2),ap1(2),ciscodump(2),randpkt(2),sshdump(2),udpdump(2)
 
 # Interface snap length (Ex: en0(65535),en1(1430),...)
 # A string
-#capture.devices_snaplen: 
+capture.devices_snaplen: p2p0:0(262144),awdl0:0(262144),llw0:0(262144),utun0:0(262144),en1:0(262144),utun1:0(262144),lo0:0(262144),en0:0(262144),bridge0:0(262144),en2:0(262144),en3:0(262144),en4:0(262144),en5:0(262144),gif0:0(262144),stf0:0(262144),ap1:0(262144),ciscodump:0(262144),randpkt:0(262144),sshdump:0(262144),udpdump:0(262144)
 
 # Interface promiscuous mode (Ex: en0(0),en1(1),...)
 # A string
-#capture.devices_pmode: 
+capture.devices_pmode: p2p0(1),awdl0(1),llw0(1),utun0(1),en1(1),utun1(1),lo0(1),en0(1),bridge0(1),en2(1),en3(1),en4(1),en5(1),gif0(1),stf0(1),ap1(1),ciscodump(1),randpkt(1),sshdump(1),udpdump(1)
 
 # Capture in promiscuous mode?
 # TRUE or FALSE (case-insensitive)
@@ -441,7 +441,7 @@ gui.layout_content_3: PDIAGRAM
 
 # Remote capture filter
 # A string
-#extcap.ciscodump.remotefilter: deny tcp host fe80::d781:8c22:e201:9125 any eq 0, deny tcp any eq 0 host fe80::d781:8c22:e201:9125, deny tcp host fe80::aaf:dc1:f9bd:bbd1 any eq 0, deny tcp any eq 0 host fe80::aaf:dc1:f9bd:bbd1, deny tcp host fe80::90be:f7e1:3590:b943 any eq 0, deny tcp any eq 0 host fe80::90be:f7e1:3590:b943, deny tcp host fe80::c8a4:b4fd:f58c:ec8e any eq 0, deny tcp any eq 0 host fe80::c8a4:b4fd:f58c:ec8e, deny tcp host fe80::b8e3:5cff:feec:4570 any eq 0, deny tcp any eq 0 host fe80::b8e3:5cff:feec:4570, deny tcp host fe80::b8e3:5cff:feec:4570 any eq 0, deny tcp any eq 0 host fe80::b8e3:5cff:feec:4570, deny tcp host fd50:600d:fa39::a34 any eq 0, deny tcp any eq 0 host fd50:600d:fa39::a34, deny tcp host fd50:600d:fa39:0:8d14:992d:5098:2a39 any eq 0, deny tcp any eq 0 host fd50:600d:fa39:0:8d14:992d:5098:2a39, deny tcp host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9 any eq 0, deny tcp any eq 0 host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9, deny tcp host 192.168.1.174 any eq 0, deny tcp any eq 0 host 192.168.1.174, deny tcp host fe80::18f5:3406:fee7:ce4 any eq 0, deny tcp any eq 0 host fe80::18f5:3406:fee7:ce4, deny tcp host fe80::aede:48ff:fe00:1122 any eq 0, deny tcp any eq 0 host fe80::aede:48ff:fe00:1122, deny tcp host fe80::1 any eq 0, deny tcp any eq 0 host fe80::1, permit ip any any
+#extcap.ciscodump.remotefilter: deny tcp host fe80::2c37:6a1a:6939:bd87 any eq 0, deny tcp any eq 0 host fe80::2c37:6a1a:6939:bd87, deny tcp host fe80::f400:b53e:98ac:666e any eq 0, deny tcp any eq 0 host fe80::f400:b53e:98ac:666e, deny tcp host fe80::4448:3ff:fed5:485e any eq 0, deny tcp any eq 0 host fe80::4448:3ff:fed5:485e, deny tcp host fe80::4448:3ff:fed5:485e any eq 0, deny tcp any eq 0 host fe80::4448:3ff:fed5:485e, deny tcp host 192.168.1.174 any eq 0, deny tcp any eq 0 host 192.168.1.174, deny tcp host fd50:600d:fa39::a34 any eq 0, deny tcp any eq 0 host fd50:600d:fa39::a34, deny tcp host fd50:600d:fa39:0:d87e:8781:fc27:612a any eq 0, deny tcp any eq 0 host fd50:600d:fa39:0:d87e:8781:fc27:612a, deny tcp host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9 any eq 0, deny tcp any eq 0 host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9, deny tcp host fe80::148b:b76d:4602:7f09 any eq 0, deny tcp any eq 0 host fe80::148b:b76d:4602:7f09, deny tcp host fe80::aede:48ff:fe00:1122 any eq 0, deny tcp any eq 0 host fe80::aede:48ff:fe00:1122, deny tcp host fe80::1 any eq 0, deny tcp any eq 0 host fe80::1, permit ip any any
 
 # Packets to capture
 # A string
@@ -509,7 +509,7 @@ gui.layout_content_3: PDIAGRAM
 
 # Remote capture filter
 # A string
-#extcap.sshdump.remotefilter: not ((host fe80::d781:8c22:e201:9125 or host fe80::aaf:dc1:f9bd:bbd1 or host fe80::90be:f7e1:3590:b943 or host fe80::c8a4:b4fd:f58c:ec8e or host fe80::b8e3:5cff:feec:4570 or host fe80::b8e3:5cff:feec:4570 or host fd50:600d:fa39::a34 or host fd50:600d:fa39:0:8d14:992d:5098:2a39 or host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9 or host 192.168.1.174 or host fe80::18f5:3406:fee7:ce4 or host fe80::aede:48ff:fe00:1122 or host fe80::1) and port 22)
+#extcap.sshdump.remotefilter: not ((host fe80::2c37:6a1a:6939:bd87 or host fe80::f400:b53e:98ac:666e or host fe80::4448:3ff:fed5:485e or host fe80::4448:3ff:fed5:485e or host 192.168.1.174 or host fd50:600d:fa39::a34 or host fd50:600d:fa39:0:d87e:8781:fc27:612a or host fd50:600d:fa39:0:c1a:28fc:ec06:ffc9 or host fe80::148b:b76d:4602:7f09 or host fe80::aede:48ff:fe00:1122 or host fe80::1) and port 22)
 
 # Packets to capture
 # A string
