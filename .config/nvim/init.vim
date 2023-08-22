@@ -16,6 +16,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'rust-lang/rust.vim'
     " --- C/CPP ---
     Plug 'kburdett/vim-nuuid'
+    " --- Nix ---
+    Plug 'LnL7/vim-nix'
     " -- Autocompletion / Code-Navigation ---
     Plug 'preservim/nerdtree'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
