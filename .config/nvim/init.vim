@@ -18,6 +18,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'kburdett/vim-nuuid'
     " --- Nix ---
     Plug 'LnL7/vim-nix'
+    " --- Just ---
+    Plug 'NoahTheDuke/vim-just'
     " -- Autocompletion / Code-Navigation ---
     Plug 'preservim/nerdtree'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
