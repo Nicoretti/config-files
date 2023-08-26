@@ -2,7 +2,7 @@
 set hidden
 
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'rust': ['rust-analyzer'],
     \ 'python': ['/usr/local/bin/pyls'],
     \ 'python3': ['/usr/local/bin/pyls'],
     \ }
