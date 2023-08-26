@@ -8,6 +8,7 @@ let g:LanguageClient_serverCommands = {
     \ }
 
 nnoremap <Leader><SPACE> :call LanguageClient_contextMenu()<CR>
+nnoremap <Leader>f :call LanguageClient#textDocument_formatting()<CR>
 nnoremap <Leader>d :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <Leader>r :call LanguageClient#textDocument_rename()<CR>
 nnoremap <silent> <Leader>i :call LanguageClient#textDocument_hover()<CR>
