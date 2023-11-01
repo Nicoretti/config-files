@@ -20,6 +20,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'LnL7/vim-nix'
     " --- Just ---
     Plug 'NoahTheDuke/vim-just'
+    " --- Caddy File Syntax Support --
+    Plug 'isobit/vim-caddyfile'
     " -- Autocompletion / Code-Navigation ---
     Plug 'preservim/nerdtree'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
