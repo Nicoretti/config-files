@@ -263,7 +263,7 @@ hints:
    - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
              [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
      hyperlinks: true
-     command: xdg-open
+     command: uopen
      post_processing: true
      mouse:
        enabled: true
