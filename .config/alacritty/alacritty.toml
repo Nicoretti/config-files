@@ -1,9 +1,4 @@
-alt_send_esc = true
-"background.opacity" = 1.0
-enable_experimental_conpty_backend = false
 live_config_reload = true
-persistent_logging = false
-render_timer = false
 
 [bell]
 animation = "EaseOutExpo"
@@ -562,12 +557,6 @@ hide_when_typing = false
 action = "PasteSelection"
 mouse = "Middle"
 
-[mouse.double_click]
-threshold = 300
-
-[mouse.triple_click]
-threshold = 300
-
 [scrolling]
 history = 10000
 multiplier = 3
@@ -580,7 +569,6 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 decorations = "full"
 dynamic_padding = false
 dynamic_title = true
-start_maximized = true
 
 [window.dimensions]
 columns = 0
