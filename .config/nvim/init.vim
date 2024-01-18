@@ -14,6 +14,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'majutsushi/tagbar'
     " --- Rust ---
     Plug 'rust-lang/rust.vim'
+    " --- Kdl ---
+    Plug 'imsnif/kdl.vim'
     " --- C/CPP ---
     Plug 'kburdett/vim-nuuid'
     " --- Nix ---
