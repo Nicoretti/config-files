@@ -1,4 +1,1 @@
-
-return { { 'preservim/nerdtree', },
-
-}
+return  { 'preservim/nerdtree' }
