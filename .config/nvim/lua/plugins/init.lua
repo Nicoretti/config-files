@@ -5,4 +5,5 @@ return {
     require('plugins/status-line'),
     require('plugins/seoul256'),
     require('plugins/fuzzy-search'),
+    require('plugins/fzf-vim'),
 }

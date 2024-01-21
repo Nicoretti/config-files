@@ -1,1 +1,4 @@
-return { "vim-airline/vim-airline" }
+return {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+}

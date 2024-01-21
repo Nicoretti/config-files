@@ -1,16 +1,29 @@
-local bootstrap = require("bootstrap")
+function init()
+    -- make sure plugin manager is available (lazy.nvim)
+    local bootstrap = require("bootstrap")
+end
 
-vim.g.mapleader = ","
+function conf()
+    -- make sure leader is defined before any mappings are done
+    vim.g.mapleader = ","
+    
+    -- load/initalize all modules
+    local modules = {
+        plugins = require("plugins/init"),
+        keymaps = require("config/keymaps"),
+        options = require("config/options"),
+        autocmds = require("config/autocmds"),
+        abbrevisations = require("config/abbreviations"),
+    }
+    -- initalize lazy
+    lazy = require("lazy").setup(modules.plugins)
+end
 
-modules = {
-    plugins = require("plugins/init"),
-    keymaps = require("config/keymaps"),
-    options = require("config/options"),
-    autocmds = require("config/autocmds"),
-    abbrevisations = require("config/abbreviations"),
-}
-lazy = require("lazy").setup(modules.plugins),
+function post()
+    require('lualine').setup()
+    vim.cmd.colorscheme("seoul256")
+end
 
-vim.cmd.colorscheme("seoul256")
---vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+init()
+conf()
+post()
