@@ -1,7 +1,12 @@
 return { 
-	"folke/neodev.nvim", 
-	"folke/which-key.nvim", 
-	{ "folke/neoconf.nvim", cmd = "Neoconf" },
-	'preservim/nerdtree',
-	'junegunn/seoul256.vim',
+	-- Nerdtree & git
+	"plugins/nerdtree",
+	"Xuyuanp/nerdtree-git-plugin",
+	"tpope/vim-fugitive",
+	"vim-airline/vim-airline",
+	{ "junegunn/fzf", run= function() vim.fn['fzf#install']() end },
+	"junegunn/fzf.vim",
+	-- Color schemes
+	"junegunn/seoul256.vim",
+	 
 }
