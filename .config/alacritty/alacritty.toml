@@ -48,7 +48,7 @@ x = 0
 y = 0
 
 [font.normal]
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font"
 
 [font.offset]
 x = 0
@@ -569,6 +569,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 decorations = "full"
 dynamic_padding = false
 dynamic_title = true
+option_as_alt = "Both"
 
 [window.dimensions]
 columns = 0
