@@ -21,9 +21,11 @@ end
 
 function post()
     require('lualine').setup()
+    vim.opt.colorcolumn = "100"
     vim.cmd.colorscheme("seoul256")
 end
 
+-- configure neovim
 init()
 conf()
 post()
