@@ -4,6 +4,8 @@ vim.g.mapleader = ","
 local plugins = require("plugins/init")
 local keymaps = require("config/keymaps")
 local options = require("config/options")
+local autocmds = require("config/autocmds")
+local abbrevisations = require("config/abbreviations")
 local lazy = require("lazy").setup(plugins)
 
 vim.cmd.colorscheme("seoul256")
