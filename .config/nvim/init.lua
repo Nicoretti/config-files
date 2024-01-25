@@ -1,31 +1,13 @@
-nvim = require("bootstrap")
+local ok, util = pcall(require, 'util')
 
---if version.minor <= 9:
-local version_check = function()
-    local _current_version = vim.version()
-    local _required_version = { major = 0, minor = 9, patch = 0 }
-    if not (_current_version.major >= _required_version.major and _current_version.minor >= _required_version.minor) then 
-        error(string.format("This configuration requires Neovim version >= %d.%d.%d, but the used version is: %d.%d.%d",
-            _required_version.major, _required_version.minor, _required_version.patch,
-            _current_version.major, _current_version.minor, _current_version.patch
-        ))
-    end
+if not ok then
+    local msg = 'lua/util.lua not found.'
+    vim.notify(msg, vim.log.levels.ERROR)
+    return
 end
 
--- make sure we execute a compatible version of nvim
-version_check()
-
-
-
--- TODO: Consider replacing this in the future which actual code detecting plugin files
---       based on their location (/lua/plugins/*.lua).
-local plugins = {
-    'plugins/git',
-    'plugins/nerdtree',
-    'plugins/nerdtree-git',
-    'plugins/status-line',
-    'plugins/seoul256',
-    'plugins/fuzzy-search',
-    'plugins/fzf-vim',
-}
-nvim.init(plugins)
+util.load_module('config.abbreviations')
+util.load_module('config.autocmds')
+util.load_module('config.keymaps')
+util.load_module('config.options')
+util.load_module('plugin-manager')

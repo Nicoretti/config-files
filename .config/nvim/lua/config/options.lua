@@ -60,3 +60,8 @@ vim.opt.ignorecase = true
 -- Adjust how whitespace is shown if (list) is enabled
 vim.opt.listchars = { eol='$', tab='^T', extends='>', precedes='<', space='.'}
 
+-- Completion menu style
+vim.opt.completeopt = "menu"
+
+-- Max column width indicator
+vim.opt.colorcolumn = "100"

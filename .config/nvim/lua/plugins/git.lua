@@ -1,1 +1,2 @@
-return { "tpope/vim-fugitive" }
+local M = { "tpope/vim-fugitive" }
+return M
