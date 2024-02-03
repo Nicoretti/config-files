@@ -10,7 +10,6 @@ M.dependencies = {
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-nvim-lua' },
     { 'hrsh7th/cmp-omni' },
-    { 'hrsh7th/cmp-copilot'},
     { 'quangnguyen30192/cmp-nvim-tags' },
     -- Snippets
     { 'L3MON4D3/LuaSnip' },
@@ -36,7 +35,6 @@ function M.config()
         nvim_lua = 'Π',
         omni = 'Π',
         tags = 't',
-        copilot = '🤖',
 
     }
 
@@ -58,7 +56,6 @@ function M.config()
         },
         sources = {
             { name = 'path' },
-            { name = 'copilot'},
             { name = 'nvim_lsp', keyword_length = 3 },
             { name = 'buffer',   keyword_length = 3 },
             { name = 'luasnip',  keyword_length = 2 },
