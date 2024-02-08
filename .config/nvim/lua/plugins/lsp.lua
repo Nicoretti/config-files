@@ -78,6 +78,17 @@ function user.lspconfig(lsp)
     }
 end
 
+local _opts = function(base, additions)
+    local copy = {}
+    for key, value in pairs(base) do
+        copy[key] = value
+    end
+    for key, value in pairs(additions) do
+        copy[key] = value
+    end
+    return copy
+end
+
 function user.lsp_attach(_, bufnr)
     local telescope = util.load_module('telescope.builtin')
     local lsp = vim.lsp.buf
@@ -88,26 +99,26 @@ function user.lsp_attach(_, bufnr)
         vim.lsp.buf.format({ async = input.bang })
     end, {})
 
-    local opts = { silent = true, buffer = bufnr }
+    local common_opts = { silent = true, buffer = bufnr }
 
-    bind({ 'n', 'x' }, 'gq', '<cmd>LspFormat!<cr>', opts)
+    bind('n', 'gq', '<cmd>LspFormat<cr>', common_opts)
 
-    bind('n', 'K', lsp.hover, opts)
-    bind('n', 'gd', lsp.definition, opts)
-    bind('n', 'gD', lsp.declaration, opts)
-    bind('n', 'gi', lsp.implementation, opts)
-    bind('n', 'go', lsp.type_definition, opts)
-    bind('n', 'gr', lsp.references, opts)
-    bind('n', 'gs', lsp.signature_help, opts)
-    bind('n', '<F2>', lsp.rename, opts)
-    bind('n', '<F4>', lsp.code_action, opts)
+    bind('n', 'K', lsp.hover, _opts(common_opts, { desc = "Hover" }))
+    bind('n', 'gd', lsp.definition, _opts(common_opts, { desc = "Go to definition" }))
+    bind('n', 'gD', lsp.declaration, _opts(common_opts, { desc = "Go to declaration" }))
+    bind('n', 'gi', lsp.implementation, _opts(common_opts, { desc = "Go to implementation" }))
+    bind('n', 'go', lsp.type_definition, _opts(common_opts, { desc = "Type definition" }))
+    bind('n', 'gr', lsp.references, _opts(common_opts, { desc = "References" }))
+    bind('n', 'gs', lsp.signature_help, _opts(common_opts, { desc = "Signature help" }))
+    bind('n', '<F2>', lsp.rename, _opts(common_opts, { desc = "Rename..." }))
+    bind('n', '<F4>', lsp.code_action, _opts(common_opts, { desc = "Code Action" }))
 
-    bind('n', 'gl', vim.diagnostic.open_float, opts)
-    bind('n', '[d', vim.diagnostic.goto_prev, opts)
-    bind('n', ']d', vim.diagnostic.goto_next, opts)
+    bind('n', 'gl', vim.diagnostic.open_float, _opts(common_opts, { desc = "Open Float" }))
+    bind('n', '[d', vim.diagnostic.goto_prev, _opts(common_opts, { desc = "Diagnostic (Prev)" }))
+    bind('n', ']d', vim.diagnostic.goto_next, _opts(common_opts, { desc = "Diagnostic (Next)" }))
 
-    bind('n', '<leader>fd', telescope.lsp_document_symbols, opts)
-    bind('n', '<leader>fq', telescope.lsp_workspace_symbols, opts)
+    bind('n', '<leader>fd', telescope.lsp_document_symbols, _opts(common_opts, { desc = "Symbols (Document)" }))
+    bind('n', '<leader>fq', telescope.lsp_workspace_symbols, _opts(common_opts, { desc = "Symbols (Workspace)" }))
 end
 
 function user.diagnostics(lsp)
