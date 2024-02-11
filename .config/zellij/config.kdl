@@ -282,11 +282,25 @@ themes{
         white 192 202 245
         orange 255 158 100
     }
+
+    nordic {
+        fg "#EFD49F"
+        bg "#81A1C1"
+        black "#191D24"
+        red "#BF616A"
+        green "#A3BE8C"
+        yellow "#EBCB8B"
+        blue "#81A1C1"
+        magenta "#BE9DB9"
+        cyan "#9FC6C5"
+        white "#C0C8D8"
+        orange "#D79784"
+    }
 }
 
 // Choose a theme that is specified in the themes section.
 // Default: default
-theme "tokyo-night"
+theme "nordic"
 
 
 // The name of the default layout to load on startup
