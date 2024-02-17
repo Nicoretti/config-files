@@ -1,0 +1,131 @@
+format = """
+$directory$git_branch$git_commit$git_state$git_status$git_metrics $right_format\
+$fill$package $python$lua$nix_shell$rust $username@$hostname $os$localip
+$character
+"""
+right_format="$status"
+add_newline = true
+
+[fill]
+symbol = ' '
+
+[character]
+success_symbol = '[❱》](bold blue)'
+error_symbol = "[❱》](bold red)"
+
+[status]
+format = '[Exit-Code: $status]($style) '
+disabled = false
+symbol = ''
+
+[directory]
+format='[$path]($style) [$read_only]($read_only_style) '
+style='bold yellow'
+read_only = ''
+read_only_style ='red'
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+disabled = false
+style = 'bold purple'
+
+[git_commit]
+disabled = false
+style = 'bold green'
+
+[git_state]
+disabled = false
+
+[git_status]
+disabled = false
+
+[git_metrics]
+disabled = false
+
+[go]
+disabled = false
+
+[python]
+disabled = false
+symbol='󰌠 '
+style = 'yellow bold'
+
+[lua]
+disabled = false
+
+[nix_shell]
+disabled = false
+
+[rust]
+disabled = false
+
+[package]
+disabled = false
+format = '[$symbol$version]($style)'
+symbol=' '
+
+[sudo]
+disabled = false
+
+[username]
+format = "[$user]($style)"
+style = "green"
+show_always = true
+
+[hostname]
+format = "[$hostname]($style)"
+style = "yellow"
+ssh_only = false
+
+[localip]
+disabled = false
+format='[IPv4: $localipv4]($style)'
+style = "yellow"
+ssh_only = false
+
+
+[os]
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
