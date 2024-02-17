@@ -31,3 +31,4 @@ alias local-config='${GIT_CMD} --git-dir=$HOME/.cfg-local/ --work-tree=$HOME'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+eval "$(starship init zsh)"
