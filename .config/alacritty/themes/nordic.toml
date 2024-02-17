@@ -1,28 +1,24 @@
-# Colors (Nordic)
+[colors.normal]
+black = '#2E3440'
+blue = '#5E81AC'
+cyan = '#8FBCBB'
+green = '#A3D6A9'
+magenta = '#B48EAD'
+red = '#BF616A'
+white = '#D8DEE9'
+yellow = '#EBCB8B'
+
+[colors.bright]
+black = '#4C566A'
+blue = '#81A1C1'
+cyan = '#88C0D0'
+green = '#A3BE8C'
+magenta = '#BE9DB8'
+red = '#C5727A'
+white = '#ECEFF4'
+yellow = '#EFD49F'
+
 [colors.primary]
 background = '#242933'
 foreground = '#BBBDAF'
 
-[colors.normal]
-black = '#191C1D'
-red = '#BD6062'
-green = '#A3D6A9'
-yellow = '#F0DFAF'
-blue = '#8FB4D8'
-magenta = '#C7A9D9'
-cyan = '#B6D7A8'
-white = '#BDC5BD'
-
-[colors.bright]
-black = '#727C7C'
-red = '#D18FAF'
-green = '#B7CEB0'
-yellow = '#BCBCBC'
-blue = '#E0CF9F'
-magenta = '#C7A9D9'
-cyan = '#BBDA97'
-white = '#BDC5BD'
-
-[colors.selection]
-text = '#000000'
-background = '#F0DFAF'
