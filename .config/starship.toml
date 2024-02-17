@@ -1,6 +1,6 @@
 format = """
-$directory$git_branch$git_commit$git_state$git_status$git_metrics $right_format\
-$fill$package $python$lua$nix_shell$rust $username@$hostname $os$localip
+$sudo$directory$git_branch$git_commit$git_state$git_status$git_metrics $right_format\
+$fill$package $python$lua$nix_shell$rust$haskell$go$docker $username$os$hostname $localip
 $character
 """
 right_format="$status"
@@ -24,7 +24,7 @@ grey = '#60728A'
 white = '#D8DEE9'
 
 [character]
-success_symbol = '[❱❱](bold cyan)'
+success_symbol = '[❱❱](bold blue)'
 error_symbol = "[❱❱](bold red)"
 
 [status]
@@ -57,9 +57,6 @@ disabled = false
 [git_metrics]
 disabled = false
 
-[go]
-disabled = false
-
 [python]
 disabled = false
 symbol='󰌠 '
@@ -67,38 +64,50 @@ style = 'yellow bold'
 
 [lua]
 disabled = false
+symbol = '󰢱 '
 
 [nix_shell]
 disabled = false
+symbol = ' '
 
 [rust]
 disabled = false
+style = 'orange'
+symbol='󱘗 '
+
+[haskell]
+disabled = false
+symbol = '󰲒 '
+
+[go]
+disabled = false
+style = 'blue'
+symbol = ' '
 
 [package]
 disabled = false
 format = '[$symbol$version]($style)'
-style = 'orange'
+style = 'bold orange'
 symbol=' '
 
 [sudo]
+symbol = ' '
+style = 'bold red'
+format = '[with $symbol ]($style)'
 disabled = false
 
 [username]
 format = "[$user]($style)"
-style = "cyan"
+style = "white"
 show_always = true
 
 [hostname]
 format = "[$hostname]($style)"
-style = "bold yellow"
+style = "bold cyan"
 ssh_only = false
 
 [localip]
-disabled = false
-format='[IPv4: $localipv4]($style)'
-style = "cyan"
-ssh_only = false
-
+disabled = true
 
 [os]
 disabled = false
