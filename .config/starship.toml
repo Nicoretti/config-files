@@ -5,13 +5,27 @@ $character
 """
 right_format="$status"
 add_newline = true
+palette = 'nordic'
 
 [fill]
 symbol = ' '
 
+[palettes.nordic]
+black = '##2E3440'
+blue = '#5E81AC'
+cyan = '#88C0D0'
+red = '#BF616A'
+orange = '#D08770'
+yellow = '#EBCB8B'
+magenta = '#B48EAD'
+purple = '#B48EAD'
+green='#A3BE8C'
+grey = '#60728A'
+white = '#D8DEE9'
+
 [character]
-success_symbol = '[❱》](bold blue)'
-error_symbol = "[❱》](bold red)"
+success_symbol = '[❱❱](bold cyan)'
+error_symbol = "[❱❱](bold red)"
 
 [status]
 format = '[Exit-Code: $status]($style) '
@@ -63,6 +77,7 @@ disabled = false
 [package]
 disabled = false
 format = '[$symbol$version]($style)'
+style = 'orange'
 symbol=' '
 
 [sudo]
@@ -70,18 +85,18 @@ disabled = false
 
 [username]
 format = "[$user]($style)"
-style = "green"
+style = "cyan"
 show_always = true
 
 [hostname]
 format = "[$hostname]($style)"
-style = "yellow"
+style = "bold yellow"
 ssh_only = false
 
 [localip]
 disabled = false
 format='[IPv4: $localipv4]($style)'
-style = "yellow"
+style = "cyan"
 ssh_only = false
 
 
