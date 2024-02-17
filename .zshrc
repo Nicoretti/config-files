@@ -31,3 +31,5 @@ alias local-config='${GIT_CMD} --git-dir=$HOME/.cfg-local/ --work-tree=$HOME'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+[ -f "/home/nicoretti/.ghcup/env" ] && source "/home/nicoretti/.ghcup/env" # ghcup-env
