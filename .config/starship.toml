@@ -1,6 +1,6 @@
 format = """
 $sudo$directory$git_branch$git_commit$git_state$git_status$git_metrics $right_format\
-$fill$package $python$lua$nix_shell$rust$haskell$go$docker $username$os$hostname $localip
+$fill$package $python$lua$nix_shell$rust$haskell$go$docker $username$os$hostname $localip$battery
 $character
 """
 right_format="$status"
@@ -108,6 +108,26 @@ ssh_only = false
 
 [localip]
 disabled = true
+
+[battery]
+disabled = false
+full_symbol = '󱊣'
+charging_symbol = '󰂄'
+discharging_symbol = '󰂌'
+empty_symbol = '󰂃'
+unknown_symbol = '󰂑'
+
+[[battery.display]]
+threshold = 10
+style = 'bold red'
+
+[[battery.display]]
+threshold = 30
+style = 'bold yellow'
+
+[[battery.display]]
+threshold = 100
+style = 'bold green'
 
 [os]
 disabled = false
