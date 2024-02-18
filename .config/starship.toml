@@ -1,6 +1,6 @@
 format = """
 $sudo$directory$git_branch$git_commit$git_state$git_status$git_metrics $right_format\
-$fill$package $python$lua$nix_shell$rust$haskell$go$docker $username$os$hostname $localip$battery
+$fill$package $python$conda$lua$nix_shell$rust$haskell$go$docker $username$os$hostname $localip$battery
 $character
 """
 right_format="$status"
@@ -83,6 +83,9 @@ symbol = '󰲒 '
 disabled = false
 style = 'blue'
 symbol = ' '
+
+[conda]
+disabled = false
 
 [package]
 disabled = false
