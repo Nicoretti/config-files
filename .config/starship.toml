@@ -110,7 +110,7 @@ ssh_only = false
 disabled = true
 
 [battery]
-format = '[$percentage$symbol]($style)'
+format = '[$percentage $symbol]($style)'
 disabled = false
 full_symbol = '󱊣'
 charging_symbol = '󰂄'
@@ -125,10 +125,6 @@ style = 'bold red'
 [[battery.display]]
 threshold = 30
 style = 'bold yellow'
-
-[[battery.display]]
-threshold = 100
-style = 'bold green'
 
 [os]
 disabled = false
