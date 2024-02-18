@@ -110,6 +110,7 @@ ssh_only = false
 disabled = true
 
 [battery]
+format = '[$percentage$symbol]($style)'
 disabled = false
 full_symbol = '󱊣'
 charging_symbol = '󰂄'
