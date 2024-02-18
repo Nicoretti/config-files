@@ -3,7 +3,7 @@
 # =========================================================
 plugins=(themes rust pip python web-search fzf xxd-rs nc-aliases opt)
 # Favorites: "arrow"
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
 export ZSH="${HOME}/.oh-my-zsh"
 export ZSH_CUSTOM="${HOME}/.oh-my-zsh-custom-config"
 source $ZSH/oh-my-zsh.sh

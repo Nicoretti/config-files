@@ -79,7 +79,7 @@ symbol='󱘗 '
 disabled = false
 symbol = '󰲒 '
 
-[go]
+[golang]
 disabled = false
 style = 'blue'
 symbol = ' '
@@ -98,12 +98,12 @@ disabled = false
 
 [username]
 format = "[$user]($style)"
-style = "white"
+style_user = "bold grey"
 show_always = true
 
 [hostname]
 format = "[$hostname]($style)"
-style = "bold cyan"
+style = "bold grey"
 ssh_only = false
 
 [localip]
