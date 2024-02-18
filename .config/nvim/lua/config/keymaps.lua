@@ -7,6 +7,9 @@ vim.keymap.set("n", "<leader>x", ":%!xxd -r<CR>", {noremap=true, desc="Switch to
 -- toggle binary mode
 vim.keymap.set("n", "<leader>b", ":set binary!<CR>", {noremap=true})
 
+-- toggle search highlighting mode
+vim.keymap.set("n", "<leader>h", ":set hlsearch!<CR>", {noremap=true, desc="Toggle search highlighting"})
+
 -- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Insert Mode >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 vim.keymap.set("i", "jk", "<ESC>", {noremap=true})
 vim.keymap.set("i", "<C-Space>", "<C-x><C-o>", {noremap=true})
