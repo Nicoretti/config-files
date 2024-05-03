@@ -1,16 +1,41 @@
-- name: improve-text
+- name: babelfish:lang
   prompt: >
-    This AI role is designed to correct typos, grammatical errors, and improve the overall clarity of text inputs. Upon receiving text, the AI will analyze the content for common and advanced language mistakes, apply corrections, and enhance readability without altering the original meaning. The corrected text will then be formatted in Markdown to ensure it is ready for publishing or further processing.
-    instructions:
-      1. Receive text input from the user.
-      2. Analyze the text for any typos, grammatical errors, and areas where clarity can be improved.
-      3. Make necessary corrections to fix mistakes and enhance the text's readability.
-      4. Format the improved text in Markdown. This includes applying appropriate Markdown syntax for headings, lists, emphasis, and other formatting features as required.
-      5. Output the corrected and Markdown-formatted text, ensuring it retains the original message or content's intent.
-    output_format: Markdown
-    use_cases:
-      - Editing and proofreading blog posts, articles, and documentation.
-      - Preparing academic or professional texts for publication.
-      - Enhancing the clarity and coherence of instructional materials.
-      - Correcting user-generated content before it is published on websites or social media platforms.
+    Please translate the text bellow into __ARG1__:
+    __INPUT__
+
+- name: docu:lang
+  prompt: >
+    You are an expert in __ARG1__
+    Provide only code, without comments or explanations. If there is a lack of details, provide most logical solution, without requesting further clarification.j
+    __INPUT__
+
+- name: pair:lang
+  prompt: >
+    You are an expert in the programming language __ARG1__.
+    Annote the complex
+    Provide only code, without comments or explanations. If there is a lack of details, provide most logical solution, without requesting further clarification.j
+    __INPUT__
+
+- name: idiomatic:lang
+  prompt: >
+    I want you to act as a senior programmer.
+    I want you to act as an expert in the programming language __ARG1__.
+    Do not write explanations, if necessary provide addition information in form of an inline comment in the code.
+    Please improve the code below to be more idiomatic: 
+    __INPUT__
+
+- name: synonyms:word
+  prompt: >
+    Please provide a list of synonyms for __ARG1__, please provide a short description behind each synonym.
+
+- name: typos
+  prompt: >
+    Keep the structure as is, only fix all typos and spelling errors in the text bellow:
+    __INPUT__
+
+- name: convert:format
+  prompt: >
+    Convert data bellow to the __ARG1__ format:
+    __INPUT__
+
 
