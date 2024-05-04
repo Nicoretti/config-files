@@ -1,41 +1,67 @@
-- name: babelfish:lang
+- name: typos
   prompt: >
-    Please translate the text bellow into __ARG1__:
+    Keep the structure and formatting as is, only fix all typos and spelling errors in the text below:
     __INPUT__
 
-- name: docu:lang
+- name: editor
   prompt: >
-    You are an expert in __ARG1__
-    Provide only code, without comments or explanations. If there is a lack of details, provide most logical solution, without requesting further clarification.j
-    __INPUT__
-
-- name: pair:lang
-  prompt: >
-    You are an expert in the programming language __ARG1__.
-    Annote the complex
-    Provide only code, without comments or explanations. If there is a lack of details, provide most logical solution, without requesting further clarification.j
-    __INPUT__
-
-- name: idiomatic:lang
-  prompt: >
-    I want you to act as a senior programmer.
-    I want you to act as an expert in the programming language __ARG1__.
-    Do not write explanations, if necessary provide addition information in form of an inline comment in the code.
-    Please improve the code below to be more idiomatic: 
+    As an editor, you will fix typos and grammar issues, as well as rewrite sentences to improve readability and understanding.
+    Provide only the edited text no additional comments or responses. Still you try to keep the structure of the provided text
+    and won't change unknown special symbols which are apparently context specific. 
+    Please edit the following text: 
     __INPUT__
 
 - name: synonyms:word
   prompt: >
     Please provide a list of synonyms for __ARG1__, please provide a short description behind each synonym.
 
-- name: typos
+- name: babelfish:lang
   prompt: >
-    Keep the structure as is, only fix all typos and spelling errors in the text bellow:
+    Please translate the text below to __ARG1__:
+    __INPUT__
+
+- name: pair:lang
+  prompt: >
+    You are an expert in the field of __ARG1__. Annotate and provide alternative solutions and improvements.
+    If there is a lack of details, please provide additional information based on the assumption under which you have been operating.
+    Please consider the following code:
+    __INPUT__
+
+- name: idiomatic:lang
+  prompt: >
+    I want you to act as a senior programmer.
+    I want you to act as an expert in the programming language __ARG1__.
+    Do not write explanations; if necessary, provide additional information in the form of an inline comment in the code.
+    Please improve the code below to be more idiomatic:
+    __INPUT__
+
+- name: doc:lang
+  prompt: >
+    I want you to act as a senior programmer.
+    I want you to act as an expert in the programming language __ARG1__.
+    Only add doc comments. If there is a lack of details, provide the most logical solution without requesting further clarification.
+  I want you to write doc comments for the code below:
+    __INPUT__
+
+- name: doc-py
+  prompt: >
+    I want you to serve as a senior programmer.
+    I want you to serve as an expert in the programming language Python.
+    Do not add type information in the docstring and ensure you will indent after content within each section like Args, etc.
+    I want you to use the Google Style Python docstring format.
+    Provide only code and docstrings. If there is a lack of details, provide the most logical solution without requesting further clarification.
+    I want you to write docstrings for the code below:
+    __INPUT__
+
+- name: doc-rust
+  prompt: >
+    I want you to serve as a senior programmer.
+    I want you to serve as an expert in the programming language Rust.
+    Provide only code and add Doc Comments do not wrap it in a code block.
+    Please update extend the following code:
     __INPUT__
 
 - name: convert:format
   prompt: >
-    Convert data bellow to the __ARG1__ format:
+    Convert the data bellow into the __ARG1__ format:
     __INPUT__
-
-
