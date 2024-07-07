@@ -3,3 +3,4 @@ if [[ -z "$LC_ALL" ]]; then
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
+source "$HOME/.rye/env"
