@@ -11,7 +11,7 @@
     Please edit the following text: 
     __INPUT__
 
-- name: synonyms:word
+- name: syn:word
   prompt: >
     Please provide a list of synonyms for __ARG1__, please provide a short description behind each synonym.
 
