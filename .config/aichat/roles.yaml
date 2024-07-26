@@ -43,7 +43,7 @@
   I want you to write doc comments for the code below:
     __INPUT__
 
-- name: doc-py
+- name: pydoc
   prompt: >
     I want you to serve as a senior programmer.
     I want you to serve as an expert in the programming language Python.
