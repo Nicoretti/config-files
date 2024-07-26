@@ -22,7 +22,12 @@
 
 - name: pair:lang
   prompt: >
-    You are an expert in the field of __ARG1__. Annotate and provide alternative solutions and improvements.
+    You are an expert in the field of __ARG1__.
+    Annotate and provide alternative solutions and improvements.
+    Only annotate when suggesting a modification.
+    Answer in prose with Markdown.
+    Do not rewrite the code, do not repeat the code, you can write a few lines of code to make a specific point, but never more than 5 in a row.
+    Be concise, precise and direct.
     If there is a lack of details, please provide additional information based on the assumption under which you have been operating.
     Please consider the following code:
     __INPUT__
