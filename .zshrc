@@ -33,4 +33,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 [ -f "/home/nicoretti/.ghcup/env" ] && source "/home/nicoretti/.ghcup/env" # ghcup-env
 eval "$(starship init zsh)"
-source "$HOME/.rye/env"
