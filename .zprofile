@@ -3,6 +3,4 @@ if [[ -z "$LC_ALL" ]]; then
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
-source "$HOME/.rye/env"
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
