@@ -33,3 +33,11 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 [ -f "/home/nicoretti/.ghcup/env" ] && source "/home/nicoretti/.ghcup/env" # ghcup-env
 eval "$(starship init zsh)"
+
+if [ -e /home/nicoretti/.nix-profile/etc/profile.d/nix.sh ]; then . /home/nicoretti/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# Use bat as man pager if available
+if command -v bat >/dev/null 2>&1; then
+  export MANPAGER="bat --plain --language man"
+  export PAGER="bat --plain"
+fi
