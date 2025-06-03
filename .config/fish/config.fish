@@ -11,4 +11,10 @@ if command -v bat >/dev/null 2>&1
   set -x MANPAGER "bat --plain --language man"
 end
 
-starship init fish | source
+if command -v starship
+    starship init fish | source
+end
+
+if command -v atuin
+    atuin init fish | source
+end
