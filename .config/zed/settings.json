@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "base_keymap": "JetBrains",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+
   "vim_mode": true,
   "outline_panel": {
     "dock": "right"
@@ -15,18 +18,26 @@
     "dock": "bottom",
     "font_family": "JetBrainsMono Nerd Font"
   },
-  "assistant": {
-    "default_model": {
-      "provider": "anthropic",
-      "model": "claude-3-7-sonnet-latest"
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
     },
-    "version": "2"
+    "default_profile": "write",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
+    },
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "ui_font_size": 17,
+  "buffer_font_size": 17,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rosé Pine"
+    "dark": "One Dark"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
   }
 }

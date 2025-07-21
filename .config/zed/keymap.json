@@ -4,12 +4,40 @@
 // documentation: https://zed.dev/docs/key-bindings
 //
 // To see the default key bindings run `zed: open default keymap`
+// "ctrl-alt-b": "workspace::ToggleRightDock",
+// "ctrl-b": "workspace::ToggleLeftDock",
+// "ctrl-j": "workspace::ToggleBottomDock",
+//
 // from the command palette.
 [
   {
     "context": "Workspace",
     "bindings": {
       "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      ", n": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      ", L": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      ", R": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      ", B": "workspace::ToggleBottomDock"
     }
   },
   {
