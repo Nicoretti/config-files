@@ -7,37 +7,44 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "base_keymap": "JetBrains",
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+    "base_keymap": "JetBrains",
+    "buffer_font_family": "JetBrainsMono Nerd Font",
 
-  "vim_mode": true,
-  "outline_panel": {
-    "dock": "right"
-  },
-  "terminal": {
-    "dock": "bottom",
-    "font_family": "JetBrainsMono Nerd Font"
-  },
-  "agent": {
-    "inline_assistant_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4"
+    "vim_mode": true,
+    "outline_panel": {
+        "dock": "right"
     },
-    "default_profile": "write",
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4"
+    "hard_tabs": false,
+    "tab_size": 2,
+    "terminal": {
+        "dock": "bottom",
+        "font_family": "JetBrainsMono Nerd Font"
     },
-  },
-  "ui_font_size": 17,
-  "buffer_font_size": 17,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
-  },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  }
+    "agent": {
+        "inline_assistant_model": {
+            "provider": "copilot_chat",
+            "model": "claude-sonnet-4"
+        },
+        "default_profile": "ask",
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "claude-3.7-sonnet-thought"
+        }
+    },
+    "ui_font_size": 17,
+    "buffer_font_size": 17,
+    "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "One Dark"
+    },
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "language_overrides": {
+        "Python": {
+            "tab_size": 4
+        }
+    }
 }
