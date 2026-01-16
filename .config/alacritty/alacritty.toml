@@ -1,4 +1,4 @@
 [general]
 import = [
-    "~/.config/alacritty/macos.toml"
+    "~/.config/alacritty/common.toml"
 ]

@@ -559,8 +559,3 @@ import = [
     "~/.config/alacritty/themes/nordic.toml"
 ]
 
-[terminal]
-
-[terminal.shell]
-program = "zellij"
-args = ["-l", "welcome"]
