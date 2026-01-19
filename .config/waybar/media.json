@@ -1,0 +1,35 @@
+{
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{volume}% {icon} ",
+    "format-bluetooth-muted": "  {icon} ",
+    "format-muted": " ",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [" ", " ", " "]
+    },
+    "scroll-step": 5,
+    "on-click-right": "pavucontrol",
+    "on-click": "amixer set Master toggle"
+  },
+  "pulseaudio#mic": {
+    "format": "{icon} {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " ",
+    "on-scroll-up": "amixer set Capture 5%+",
+    "on-scroll-down": "amixer set Capture 5%-",
+    "on-click-right": "pavucontrol",
+    "on-click": "amixer set Capture toggle"
+  },
+
+  "group/media": {
+    "orientation": "horizontal",
+    "modules": ["pulseaudio", "pulseaudio#mic"]
+  }
+}
+
