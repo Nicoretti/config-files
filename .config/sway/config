@@ -26,7 +26,7 @@ set $tabmenu rofi -show combi -modes combi -combi-modes "window"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/.bg fill #d08770
 output DP-6 enable mode 2560x1440 position 0,0
 output DP-7 enable mode 2560x1440 position 2560,0 transform 270
 
@@ -74,7 +74,7 @@ output DP-7 enable mode 2560x1440 position 2560,0 transform 270
 # Basics:
 #
     # Lock
-    bindsym $mod+g exec swaylock
+    bindsym $mod+g exec swaylock -i ~/.bg-lock
 
     # Start a terminal
     bindsym $mod+Return exec $term
