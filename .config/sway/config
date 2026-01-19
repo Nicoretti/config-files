@@ -20,7 +20,8 @@ set $right l
 set $term alacritty
 
 # Your preferred application launcher
-set $menu rofi -show combi -modes combi -combi-modes "window,drun,run"
+set $menu rofi -show combi -modes combi -combi-modes "drun,run"
+set $tabmenu rofi -show combi -modes combi -combi-modes "window"
 
 ### Output configuration
 #
@@ -72,6 +73,9 @@ output DP-7 enable mode 2560x1440 position 2560,0 transform 270
 #
 # Basics:
 #
+    # Lock
+    bindsym $mod+g exec swaylock
+
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -80,6 +84,8 @@ output DP-7 enable mode 2560x1440 position 2560,0 transform 270
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    # Open tab menu
+    bindsym $mod+tab exec $tabmenu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
