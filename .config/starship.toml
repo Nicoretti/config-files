@@ -97,7 +97,7 @@ symbol=' '
 symbol = ' '
 style = 'bold red'
 format = '[with $symbol ]($style)'
-disabled = false
+disabled = true
 
 [username]
 format = "[$user]($style)"
