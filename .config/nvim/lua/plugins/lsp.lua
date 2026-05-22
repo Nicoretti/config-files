@@ -142,14 +142,14 @@ function user.diagnostics(lsp)
         group = group,
         pattern = { 'n:i', 'v:s' },
         desc = 'Disable diagnostics while typing',
-        callback = function(e) vim.diagnostic.disable(e.buf) end
+        callback = function() vim.diagnostic.enable(false) end
     })
 
     autocmd('ModeChanged', {
         group = group,
         pattern = 'i:n',
         desc = 'Enable diagnostics when leaving insert mode',
-        callback = function(e) vim.diagnostic.enable(e.buf) end
+        callback = function() vim.diagnostic.enable() end
     })
 end
 
