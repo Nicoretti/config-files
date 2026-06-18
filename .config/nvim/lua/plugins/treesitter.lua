@@ -1,9 +1,6 @@
 local M = { 'nvim-treesitter/nvim-treesitter' }
 M.pin = true
-
-M.dependencies = {
-    { 'nvim-treesitter/nvim-treesitter-textobjects', pin = true },
-}
+M.branch = 'main'
 
 M.opts = {
     highlight = {
@@ -80,7 +77,7 @@ function M.build()
 end
 
 function M.config(_, opts)
-    require('nvim-treesitter.configs').setup(opts)
+    require('nvim-treesitter.config').setup(opts)
 end
 
 return M
