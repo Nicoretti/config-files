@@ -1,0 +1,10 @@
+[diff]
+	tool = bcomp
+[difftool "bcomp"]
+	trustExitCode = true
+	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE
+[user]
+	name = Nicola Coretti
+	email = nico.coretti@gmail.com
+[alias]
+	sync = !git pull --rebase --autostash && git push
