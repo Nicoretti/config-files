@@ -1,0 +1,35 @@
+layout {
+    // Define the global tab template with the default bars
+    default_tab_template {
+        // Default top tab-bar plugin
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+
+        // The 'children' block allows injecting actual tabs/panes here
+        children
+        
+        // Default bottom status-bar plugin
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="Zellij" focus=true cwd="~/.config/zellij/" {
+
+        pane split_direction="vertical" {
+
+            pane focus=true name="Config" split_direction="vertical" command="nvim" {
+                args "-c" "NERDTree"
+            }
+
+            pane stacked=true size="35%" split_direction="horizontal" {
+                pane name="Pi" expanded=true command="ai" {
+                    args "-e" "pi-rust" "agent" "pi" "."
+                }
+                pane name="Terminal"
+            }
+
+        }
+    }
+}
