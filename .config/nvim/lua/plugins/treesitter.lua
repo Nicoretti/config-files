@@ -1,4 +1,8 @@
+-- Note: System needs to provide the tree-sitter cli!
 local M = { 'nvim-treesitter/nvim-treesitter' }
+M.lazy = false
+M.build = ':TSUpdate'
+
 M.pin = true
 M.branch = 'main'
 
@@ -71,10 +75,6 @@ M.opts = {
         'vimdoc',
     },
 }
-
-function M.build()
-    pcall(vim.cmd, 'TSUpdate')
-end
 
 function M.config(_, opts)
     require('nvim-treesitter.config').setup(opts)
