@@ -19,7 +19,7 @@ layout {
 
         pane split_direction="vertical" {
 
-            pane focus=true name="Config" split_direction="vertical" command="nvim" {
+            pane focus=true name="IDE" split_direction="vertical" command="nvim" {
                 args "-c" "NERDTree"
             }
 

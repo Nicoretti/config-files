@@ -15,17 +15,17 @@ layout {
         }
     }
 
-    tab focus=true {
+    tab name="NeoVIM" focus=true cwd="~/.config/nvim/" {
 
         pane split_direction="vertical" {
 
-            pane focus=true name="IDE" split_direction="vertical" command="nvim" {
+            pane focus=true name="Config" split_direction="vertical" command="nvim" {
                 args "-c" "NERDTree"
             }
 
             pane stacked=true size="35%" split_direction="horizontal" {
                 pane name="Pi" expanded=true command="ai" {
-                    args "-e" "pi-rust" "agent" "pi" "."
+                    args "-e" "full" "agent" "aic" "."
                 }
                 pane name="Terminal"
             }
